@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 16:49:28 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/29 17:08:37 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/06/29 17:42:33 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 char	*ft_strdup(char *src);
-char	*strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif

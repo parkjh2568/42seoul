@@ -1,12 +1,14 @@
 #include <string.h>
 #include <stdio.h>
 #include <unistd.h>
-extern int ft_memcmp(const void *s1, const void *s2, unsigned int n);
+#include "libft.h"
+
 int main()
 {
 	char str1[] = "long time agod................";
 	char str2[] = "long time agod.....i..........";
+	char *re;
 
-	printf("%d", ft_memcmp(str1, str2, 20));
-
+	re = ft_strrchr(str1, '5');
+	printf("%s\n", re);
 }

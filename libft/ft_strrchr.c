@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 17:04:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/29 17:24:25 by junhypar         ###   ########.fr       */
+/*   Created: 2020/06/29 17:24:56 by junhypar          #+#    #+#             */
+/*   Updated: 2020/06/29 17:42:28 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+int		len(const char *s)
 {
-	while(1)
+	int	i;
+
+	while (s[i])
+		i++;
+	return (i);
+}
+
+char	*ft_strrchr(const char *s, int c)
+{
+	const char *d;
+	int			i;
+
+	i = len(s) + 1;
+	d = s + i - 1;
+	while(i--)
 	{
-		if (*s == '\0')
-			return (0);
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		if (*d == c)
+			return ((char *)d);
+		d--;
 	}
+	return (0);
 }
