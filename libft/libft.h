@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 16:49:28 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/29 17:42:33 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/06/30 15:28:20 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n);
 char	*ft_strdup(char *src);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strnstr(const char *big, const char *little, unsigned int len);
+int		ft_atoi(const char *str);
 
 #endif

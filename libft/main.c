@@ -9,6 +9,7 @@ int main()
 	char str2[] = "long time agod.....i..........";
 	char *re;
 
-	re = ft_strrchr(str1, '5');
-	printf("%s\n", re);
+//	re = ft_strnstr(str2, "..i", 20);
+//	printf("%s\n", re);
+	printf("%d\n%d\n%d\n",ft_atoi("   -20"), ft_atoi(" kk"), ft_atoi("+66"));
 }
