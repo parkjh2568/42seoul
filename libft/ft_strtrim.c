@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 17:04:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 11:39:54 by junhypar         ###   ########.fr       */
+/*   Created: 2020/07/01 11:11:07 by junhypar          #+#    #+#             */
+/*   Updated: 2020/07/01 11:43:49 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	while (1)
-	{
-		if (*s == '\0')
-			return (0);
-		if (*s == c)
-			return ((char *)s);
-		s++;
-	}
+	int		i;
+	int		j;
+	char	*out;
+
+	i = 0;
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	j = ft_strlen((char *)s1);
+	while (s1[j - 1] && ft_strchr(set, s1[j - 1]))
+		j--;
+	if (!(out = malloc(sizeof(char) * (j - i + 1))))
+		return (NULL);
+	ft_strlcpy(out, (char *)&s1[i], (j - i + 1));
+	return (out);
 }

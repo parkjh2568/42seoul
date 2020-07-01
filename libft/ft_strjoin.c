@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/29 17:04:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 11:39:54 by junhypar         ###   ########.fr       */
+/*   Created: 2020/07/01 11:03:51 by junhypar          #+#    #+#             */
+/*   Updated: 2020/07/01 11:31:50 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	while (1)
+	char	*out;
+	int		len1;
+	int		len2;
+	int		i;
+
+	i = 0;
+	len1 = ft_strlen((char *)s1);
+	len2 = ft_strlen((char *)s2);
+	if (!(out = malloc(sizeof(char) * (len1 + len2 + 1))))
+		return (NULL);
+	while (i < len1)
 	{
-		if (*s == '\0')
-			return (0);
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		out[i] = s1[i];
+		i++;
 	}
+	while (i < len1 + len2)
+	{
+		out[i] = s2[i - len1];
+		i++;
+	}
+	out[i] = 0;
+	return (out);
 }
