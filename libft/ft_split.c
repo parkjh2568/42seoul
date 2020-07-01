@@ -6,12 +6,11 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 11:48:49 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 13:10:17 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 13:23:23 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_word(int i, char const *s, char c)
 {

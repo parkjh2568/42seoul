@@ -27,10 +27,10 @@ int main()
 //	re = ft_strnstr(str1, "tim", 20);
 //	printf("%s\n", re);
 //	printf("%d\n%d\n%d\n",ft_atoi("   -20"), ft_atoi(" kk"), ft_atoi("+66"));
-//	str3 = ft_strtrim(str1, str4);
-//	printf("%s\n",str3);
-//	free(str3);
-	outa = ft_split(str1, ' ');
+	str3 = ft_itoa(-33);
+	printf("%s\n",str3);
+	free(str3);
+/*	outa = ft_split(str1, ' ');
 	int kk;
 	kk = 0;
 	while (outa[kk])
@@ -38,6 +38,6 @@ int main()
 		printf("%s\n",outa[kk]);
 		kk++;
 	}
-	freeall(outa);
+	freeall(outa);*/
 
 }
