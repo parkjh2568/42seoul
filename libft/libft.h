@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 16:49:28 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 13:58:34 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 14:07:04 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 void		*ft_memchr(const void *src, int c, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t n);
