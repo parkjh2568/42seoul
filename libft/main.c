@@ -16,6 +16,12 @@ void	freeall(char **outd)
 	free(outd);
 }
 
+char	ff(unsigned int i, char c)
+{
+	c = i % 10 + '0';
+	return (c);
+}
+
 int main()
 {
 	char str1[] = "long time agod....... .........end";
@@ -27,7 +33,7 @@ int main()
 //	re = ft_strnstr(str1, "tim", 20);
 //	printf("%s\n", re);
 //	printf("%d\n%d\n%d\n",ft_atoi("   -20"), ft_atoi(" kk"), ft_atoi("+66"));
-	str3 = ft_itoa(-33);
+	str3 = ft_strmapi(str4, ff);
 	printf("%s\n",str3);
 	free(str3);
 /*	outa = ft_split(str1, ' ');
