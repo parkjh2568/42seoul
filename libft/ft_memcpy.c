@@ -6,11 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 15:21:00 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/29 16:54:43 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 10:12:28 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memcpy(void *dst, const void *src, unsigned int n)
+#include "libft.h"
+
+void *ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char		*d;
 	const char	*s;

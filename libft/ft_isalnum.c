@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/30 11:02:12 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 10:15:33 by junhypar         ###   ########.fr       */
+/*   Created: 2020/07/01 09:37:48 by junhypar          #+#    #+#             */
+/*   Updated: 2020/07/01 09:39:06 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t		ft_strlcpy(char *dest, char *src, size_t size)
+int	ft_isalnum(int c)
 {
-	size_t a;
-	size_t b;
-
-	a = 0;
-	b = 0;
-	if (size != 0)
-	{
-		while (src[a] && a < size - 1)
-		{
-			dest[a] = src[a];
-			a++;
-		}
-		dest[a] = '\0';
-	}
-	while (src[b])
-	{
-		b++;
-	}
-	return (b);
+	if ((c >= 'A') && (c <= 'Z'))
+		return (1);
+	else if ((c >= 'a') && (c <= 'z'))
+		return (1);
+	else if ((c >= '0') && (c <= '9'))
+		return (1);
+	return (0);
 }

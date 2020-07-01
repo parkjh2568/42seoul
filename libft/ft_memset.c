@@ -6,11 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 14:41:03 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/29 16:52:55 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 10:11:50 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *ptr, int value, unsigned int num)
+#include "libft.h"
+
+void	*ft_memset(void *ptr, int value, size_t num)
 {
 	char			*str;
 

@@ -6,9 +6,11 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 14:37:09 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/30 14:47:52 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 10:16:26 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_len(const char *str)
 {
@@ -20,7 +22,7 @@ int		ft_len(const char *str)
 	return (i);
 }
 
-char	*ft_strnstr(const char *big, const char *little, unsigned int len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	int		biglen;
 	int		littlelen;
@@ -33,7 +35,7 @@ char	*ft_strnstr(const char *big, const char *little, unsigned int len)
 	if (littlelen <= 0)
 		return (0);
 	if (len > biglen)
-		len = (unsigned int)biglen;
+		len = (size_t)biglen;
 	while (i < len)
 	{
 		j = 0;

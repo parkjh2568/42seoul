@@ -6,11 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 16:38:05 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/29 16:52:28 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 10:11:05 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_memcmp(const void *s1, const void *s2, unsigned int n)
+#include "libft.h"
+
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const char *c1;
 	const char *c2;

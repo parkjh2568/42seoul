@@ -6,13 +6,15 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/01 09:47:25 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/29 16:55:39 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 10:17:09 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_strncmp(char *s1, char *s2, unsigned int n)
+#include "libft.h"
+
+int			ft_strncmp(char *s1, char *s2, size_t n)
 {
-	unsigned int a;
+	size_t a;
 
 	a = 0;
 	if (n != 0)

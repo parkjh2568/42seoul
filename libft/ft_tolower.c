@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/30 11:02:12 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 10:15:33 by junhypar         ###   ########.fr       */
+/*   Created: 2020/07/01 09:47:03 by junhypar          #+#    #+#             */
+/*   Updated: 2020/07/01 09:47:31 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t		ft_strlcpy(char *dest, char *src, size_t size)
+int	ft_tolower(int c)
 {
-	size_t a;
-	size_t b;
-
-	a = 0;
-	b = 0;
-	if (size != 0)
-	{
-		while (src[a] && a < size - 1)
-		{
-			dest[a] = src[a];
-			a++;
-		}
-		dest[a] = '\0';
-	}
-	while (src[b])
-	{
-		b++;
-	}
-	return (b);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	else
+		return (c);
 }

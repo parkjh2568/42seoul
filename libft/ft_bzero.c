@@ -6,11 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 15:14:08 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/29 16:51:55 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 10:10:32 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_bzero(void *s, unsigned int n)
+#include "libft.h"
+
+void ft_bzero(void *s, size_t n)
 {
 	char	*str;
 

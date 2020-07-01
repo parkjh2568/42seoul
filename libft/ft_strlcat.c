@@ -6,13 +6,15 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/01 10:07:57 by junhypar          #+#    #+#             */
-/*   Updated: 2020/06/29 16:55:12 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 10:14:11 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int					str_len(char *c)
 {
-	unsigned int len;
+	size_t len;
 
 	len = 0;
 	while (c[len])
@@ -22,12 +24,12 @@ int					str_len(char *c)
 	return (len);
 }
 
-unsigned int		ft_strlcat(char *dest, char *src, unsigned int size)
+size_t		ft_strlcat(char *dest, char *src, size_t size)
 {
-	unsigned int dest_len;
-	unsigned int src_len;
-	unsigned int i;
-	unsigned int ret;
+	size_t dest_len;
+	size_t src_len;
+	size_t i;
+	size_t ret;
 
 	ret = 0;
 	dest_len = str_len(dest);
