@@ -6,13 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 09:36:14 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 09:37:25 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 10:51:36 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c<= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);

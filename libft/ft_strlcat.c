@@ -6,13 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/01 10:07:57 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 10:14:11 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/01 10:52:59 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int					str_len(char *c)
+int			str_len(char *c)
 {
 	size_t len;
 
