@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 14:01:20 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 14:04:40 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/02 14:44:49 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putnbr_fd(int n, int fd)
+#include "libft.h"
+
+void	ft_putnr_fd(int n, int fd)
 {
 	char a;
 
-	if (nb == -2147483648)
+	if (n == -2147483648)
 		write(fd, "-2147483648", 11);
 	else
 	{
 		if (n < 0)
 		{
 			write(fd, "-", 1);
-			nb = nb * (-1);
+			n = n * (-1);
 		}
 		a = (n % 10) + '0';
 		if (n < 10)
 			write(fd, &a, 1);
 		else
 		{
-			ft_putnbr((n / 10));
+			ft_putnr_fd((n / 10), fd);
 			write(fd, &a, 1);
 		}
 	}

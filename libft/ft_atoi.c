@@ -6,11 +6,11 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 14:50:32 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 10:50:20 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/02 14:46:16 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_len(const char *str)
+int		fttlen(const char *str)
 {
 	int i;
 
@@ -25,7 +25,7 @@ int		no_num(const char *str, int *mine)
 	int i;
 
 	i = 0;
-	while (i < ft_len(str))
+	while (i < fttlen(str))
 	{
 		if (str[i] == ' ')
 			i++;
@@ -54,7 +54,7 @@ int		ft_atoi(const char *str)
 	i = 0;
 	mine = 0;
 	out = 0;
-	len = ft_len(str);
+	len = fttlen(str);
 	i = no_num(str, &mine);
 	while (i < len)
 	{

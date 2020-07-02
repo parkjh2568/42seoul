@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 17:24:56 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 10:53:34 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/02 14:38:00 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@ int			len(const char *s)
 {
 	int	i;
 
+	i = 0;
 	while (s[i])
 		i++;
 	return (i);

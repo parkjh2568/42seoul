@@ -6,15 +6,15 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 14:37:09 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 11:01:43 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/02 14:39:46 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_len(const char *str)
+size_t		ft_len(const char *str)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (str[i])
@@ -24,7 +24,7 @@ int		ft_len(const char *str)
 
 void	check_len(const char *big, size_t *len)
 {
-	int	biglen;
+	size_t	biglen;
 
 	biglen = ft_len(big);
 	if (*len > biglen)
@@ -33,8 +33,8 @@ void	check_len(const char *big, size_t *len)
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		i;
-	int		j;
+	size_t		i;
+	size_t		j;
 
 	i = 0;
 	if (ft_len(little) <= 0)

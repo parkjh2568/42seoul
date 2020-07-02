@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 13:11:24 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 13:36:43 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/02 14:42:43 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int		ft_cot(int n)
 void	put_in(char *out, int n, int count, int mine)
 {
 	int i;
-	int n2;
 
 	i = 0;
 	while (i <= (count - 1) && n > 0)
