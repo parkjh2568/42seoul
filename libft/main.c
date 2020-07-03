@@ -24,6 +24,7 @@ char	ff(unsigned int i, char c)
 
 int main()
 {
+	t_list *ll;
 	char str1[] = "long time agod....... .........end";
 	char str2[] = "0123456789012345678901234567890123456789end";
 	char *str3;
@@ -33,9 +34,9 @@ int main()
 //	re = ft_strnstr(str1, "tim", 20);
 //	printf("%s\n", re);
 //	printf("%d\n%d\n%d\n",ft_atoi("   -20"), ft_atoi(" kk"), ft_atoi("+66"));
-	str3 = ft_strmapi(str4, ff);
+/*	str3 = ft_strmapi(str4, ff);
 	printf("%s\n",str3);
-	free(str3);
+	free(str3);*/
 /*	outa = ft_split(str1, ' ');
 	int kk;
 	kk = 0;
@@ -45,5 +46,8 @@ int main()
 		kk++;
 	}
 	freeall(outa);*/
-
+	ll = ft_lstnew("putin");
+	printf("%s\n",(char *)ll->content);
+	printf("%p\n",ll->next);
+	free(ll);
 }
