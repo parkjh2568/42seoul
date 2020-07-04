@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 09:42:04 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/03 09:55:42 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/04 20:49:12 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,26 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	start;
 	t_list	ot;
-	t_list	ot2;
 
 	start = ft_lstnew(f(lst->content));
 	if (!start)
 		return (NULL);
-	ot = lst;
-	lst = lst->next;
-	del(ot->content);
-	free(ot);
-	ot = start;
-	while (lst)
+	ot = lst->next;
+	while (ot)
 	{
 		ot->next = (ft_lstnew(f(lst->content)));
-		ot = ot->next
-		ot2 = lst;
-		lst = lst->next;
-		del(ot2->content);
-		free(ot2);
-		ot2 = 0;
+		if (!ot)
+		{
+			while (start)
+			{
+				ot = start;
+				start = start->next;
+				del(ot->content);
+				free(ot);
+				ot = 0;
+			}
+		}
+		ot = ot->next;
 	}
 	return (start);
 }
