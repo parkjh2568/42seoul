@@ -87,38 +87,6 @@ ft_lstsize:    [OK] [OK]
 ft_lstlast:    [OK] [OK] 
 ft_lstadd_back:[OK] [OK] [OK] 
 ft_lstdelone:  [OK] 
-ft_lstclear:   [FAILED] [NO CRASH] [OK] 
-[fail]: your lstclear does not work with basic input
-Test code:
-	t_list *l = lstnew(strdup("nyancat"));
-
-	l->next = lstnew(strdup("#TEST#"));
-	ft_lstclear(&l, lstdelone_f);
-	write(2, "", 1);
-	if (!l)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-    lstclear: |0x0|
- ft_lstclear: |0x7ff9e6d001f0|
-
-[no crash]: your lstclear does not free the list
-Test code:
-	t_list *l = lstnew(strdup("nyancat"));
-	t_list *tmp;
-
-	l->next = lstnew(strdup("#TEST#"));
-	tmp = l->next;
-	ft_lstclear(&l, lstdelone_f);
-	write(2, "", 1);
-	if (!l)
-	{
-		free(tmp);
-		exit(TEST_SUCCESS);
-	}
-	exit(TEST_FAILED);
-
-
+ft_lstclear:   [OK] [OK] [OK] 
 ft_lstiter:    [OK] {protected}
 ft_lstmap:     [OK] {not protected}
