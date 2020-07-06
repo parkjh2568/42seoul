@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 17:04:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 11:39:54 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/06 15:28:56 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (1)
 	{
-		if (*s == '\0')
+		if (*s == '\0' && c != 0)
 			return (0);
 		if (*s == c)
 			return ((char *)s);

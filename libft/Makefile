@@ -6,7 +6,7 @@
 #    By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/09 20:04:40 by junhypar          #+#    #+#              #
-#    Updated: 2020/07/06 14:38:11 by junhypar         ###   ########.fr        #
+#    Updated: 2020/07/06 15:10:18 by junhypar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ all:		${NAME}
 ${NAME}:	${OBJS}
 			ar rc ${NAME} ${OBJS}
 
-bouns:		fclean ${OBJS} ${OBJS2}
+bonus:		${OBJS} ${OBJS2}
 			ar rc ${NAME} ${OBJS} ${OBJS2}
 
 clean:
@@ -40,4 +40,3 @@ fclean:		clean
 			rm -f ${NAME}
 
 re:			fclean all
-

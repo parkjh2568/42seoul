@@ -6,13 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 09:41:20 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 09:42:10 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/06 15:23:50 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c != 0)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 15:21:00 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 10:52:10 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/06 15:14:31 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char		*d;
 	const char	*s;
 
+	if (!dst && !src)
+		return (NULL);
 	d = (char *)dst;
 	s = (const char *)src;
 	while (n--)

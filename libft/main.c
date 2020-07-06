@@ -34,10 +34,10 @@ int main()
 //	re = ft_strnstr(str1, "tim", 20);
 //	printf("%s\n", re);
 //	printf("%d\n%d\n%d\n",ft_atoi("   -20"), ft_atoi(" kk"), ft_atoi("+66"));
-/*	str3 = ft_strmapi(str4, ff);
+	str3 = ft_itoa(-2147483647 - 1);
 	printf("%s\n",str3);
-	free(str3);*/
-/*	outa = ft_split(str1, ' ');
+	free(str3);
+/*	outa = ft_split(s, ' ');
 	int kk;
 	kk = 0;
 	while (outa[kk])
@@ -46,8 +46,8 @@ int main()
 		kk++;
 	}
 	freeall(outa);*/
-	ll = ft_lstnew("putin");
+/*	ll = ft_lstnew("putin");
 	printf("%s\n",(char *)ll->content);
 	printf("%p\n",ll->next);
-	free(ll);
+	free(ll);*/
 }

@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 11:48:49 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 13:23:23 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/06 16:40:07 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_word(int i, char const *s, char c)
 	int		cc;
 	char	*wod;
 
-	if (s[i + 1] == 0)
+	if (s[i + 1] == 0 && s[i] != c)
 		i = i + 1;
 	l = i - 1;
 	cc = 0;

@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 14:50:32 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/02 14:46:16 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/06 15:48:25 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int		no_num(const char *str, int *mine)
 	i = 0;
 	while (i < fttlen(str))
 	{
-		if (str[i] == ' ')
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' ||
+				str[i] == '\f' || str[i] == '\r' || str[i] == '\n')
 			i++;
 		else
 			break ;

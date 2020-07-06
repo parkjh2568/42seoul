@@ -6,14 +6,16 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 09:36:05 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/03 09:38:32 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/06 14:44:57 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list ot;
-	t_list ot2;
+	t_list *ot;
+	t_list *ot2;
 
 	ot = *lst;
 	while (ot->next)

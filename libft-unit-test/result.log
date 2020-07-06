@@ -1,226 +1,25 @@
 ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_bzero:      [OK] [OK] [OK] [OK] 
-ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] 
-[crash]: your memcpy does not behave well with NULL as both params with size
-Test code:
-	ft_memcpy(((void *)0), ((void *)0), 3);
-
-
-ft_memccpy:    [OK] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-[fail]: your memccpy doesn't cast the stop-character into unsigned char
-Test code:
-	char buff1[] = "abcdefghijklmnopqrstuvwxyz";
-	char buff2[] = "abcdefghijklmnopqrstuvwxyz";
-	char *src = "string with\200inside !";
-
-	__builtin___memccpy_chk (buff1, src, 0600, 21, __builtin_object_size (buff1, 0));
-	ft_memccpy(buff2, src, 0600, 21);
-	if (!memcmp(buff1, buff2, 21))
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-     memccpy: |string with€mnopqrstuvwxyz|
-  ft_memccpy: |string with€inside !|
-
-ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] [OK] 
-[crash]: your memmove does not well with NULL as both parameters and size
-Test code:
-	ft_memmove(((void *)0), ((void *)0), 5);
-
-
+ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memccpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_memcmp:     [OK] [OK] [OK] [FAILED] [FAILED] [OK] [FAILED] [OK] [OK] [OK] 
-[fail]: your memcmp does not work with basic input
-Test code:
-	char *s1 = "\xff\xaa\xde\xffMACOSX\xff";
-	char *s2 = "\xff\xaa\xde\x02";
-	size_t size = 8;
-	int i1 = simple_memcmp(s1, s2, size);
-	int i2 = ft_memcmp(s1, s2, size);
-
-	if (i1 == i2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-      memcmp: |253|
-   ft_memcmp: |-3|
-
-[fail]: your memcmp does not cast the memory in unsigned char
-Test code:
-	char *s1 = "\xff\xaa\xde\200";
-	char *s2 = "\xff\xaa\xde\0";
-	size_t size = 8;
-	int i1 = simple_memcmp(s1, s2, size);
-	int i2 = ft_memcmp(s1, s2, size);
-
-	if (i1 == i2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-      memcmp: |128|
-   ft_memcmp: |-128|
-
-[fail]: your memcmp does not work with basic input
-Test code:
-	char *s1 = "\xff\0\0\xaa\0\xde\xffMACOSX\xff";
-	char *s2 = "\xff\0\0\xaa\0\xde\x00MBS";
-	size_t size = 9;
-	int i1 = simple_memcmp(s1, s2, size);
-	int i2 = ft_memcmp(s1, s2, size);
-
-	if (i1 == i2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-      memcmp: |255|
-   ft_memcmp: |-1|
-
+ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_isalpha:    [OK] 
 ft_isdigit:    [OK] 
 ft_isalnum:    [OK] 
-ft_isascii:    [FAILED] 
-[fail]: your isascii just doesn't work, REALLY ?!
-Test code:
-	int i;
-
-	i = -1;
-	while (i < 530)
-	{
-		if (!!ft_isascii(i) != !!isascii(i))
-		{
-			exit(TEST_FAILED);
-		}
-		i++;
-	}
-	exit(TEST_SUCCESS);
-
-Diffs:
-     isascii: |0|
-  ft_isascii: |1|
-param: (-1)
-
+ft_isascii:    [OK] 
 ft_isprint:    [OK] 
 ft_toupper:    [OK] 
 ft_tolower:    [OK] 
-ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [OK] 
-[fail]: your strchr does not work with \0
-Test code:
-	char *src = "there is so \0ma\0ny \0 \\0 in t\0his stri\0ng !\0\0\0\0";
-	char *d1 = strchr(src, '\0');
-	char *d2 = ft_strchr(src, '\0');
-
-	if (d1 == d2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-      strchr: ||
-   ft_strchr: |(null)|
-
+ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] [FAILED] [OK] [OK] [OK] 
-[fail]: your strncmp does not cast in unsigned char the diff
-Test code:
-	char *s1 = "\200";
-	char *s2 = "\0";
-	int i1 = ((strncmp(s1, s2, 1) > 0) ? 1 : ((strncmp(s1, s2, 1) < 0) ? -1 : 0));
-	int i2 = ((ft_strncmp(s1, s2, 1) > 0) ? 1 : ((ft_strncmp(s1, s2, 1) < 0) ? -1 : 0));
-
-	if (i1 == i2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-     strncmp: |1|
-  ft_strncmp: |-1|
-
-[fail]: your strncmp does not work with non ascii chars
-Test code:
-	char *s1 = "\x12\xff\x65\x12\xbd\xde\xad";
-	char *s2 = "\x12\x02";
-	size_t size = 6;
-	int i1 = ((strncmp(s1, s2, size) > 0) ? 1 : ((strncmp(s1, s2, size) < 0) ? -1 : 0));
-	int i2 = ((ft_strncmp(s1, s2, size) > 0) ? 1 : ((ft_strncmp(s1, s2, size) < 0) ? -1 : 0));
-
-	if (i1 == i2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-     strncmp: |1|
-  ft_strncmp: |-1|
-
+ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strlcpy:    [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
 ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_strnstr:    [OK] [OK] [FAILED] [OK] [OK] [OK] [OK] [FAILED] [FAILED] [OK] [OK] [OK] [OK] [OK] 
-[fail]: your strnstr does not work with basic input
-Test code:
-	char *s1 = "MZIRIBMZIRIBMZE123";
-	char *s2 = "MZIRIBMZE";
-	size_t max = strlen(s2);
-	char *i1 = strnstr(s1, s2, max);
-	char *i2 = ft_strnstr(s1, s2, max);
-
-	if (i1 == i2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-     strnstr: |(null)|
-  ft_strnstr: |MZIRIBMZE123|
-
-[fail]: your strnstr does not work with empty strings
-Test code:
-	char *s1 = "oh no not the empty string !";
-	char *s2 = "";
-	size_t max = strlen(s1);
-	char *i1 = strnstr(s1, s2, max);
-	char *i2 = ft_strnstr(s1, s2, max);
-
-	if (i1 == i2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-     strnstr: |oh no not the empty string !|
-  ft_strnstr: |(null)|
-
-[fail]: your strnstr does not work with empty strings and 0 length
-Test code:
-	char *s1 = "oh no not the empty string !";
-	char *s2 = "";
-	size_t max = 0;
-	char *i1 = strnstr(s1, s2, max);
-	char *i2 = ft_strnstr(s1, s2, max);
-
-	if (i1 == i2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-     strnstr: |oh no not the empty string !|
-  ft_strnstr: |(null)|
-
-ft_atoi:       [OK] [OK] [OK] [FAILED] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [OK] 
-[fail]: your atoi is not working with blanks
-Test code:
-	char *n = "\t\v\f\r\n \f-06050";
-	int i1 = atoi(n);
-	int i2 = ft_atoi(n);
-
-	if (i1 == i2)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-Diffs:
-        atoi: |-6050|
-     ft_atoi: |0|
-
+ft_strnstr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [OK] 
 [KO]: your atoi does not work with over long max value
 Test code:
 	char n[40] = "99999999999999999999999999";
@@ -253,107 +52,10 @@ ft_calloc:     [OK] [OK] [OK] [OK] [OK]
 ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_substr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
 ft_strjoin:    [OK] [OK] [OK] [OK] [OK] {not protected}
-ft_strtrim:    [OK] [OK] [OK] [CRASH] [OK] [OK] [OK] [OK] [OK] {not protected}
-[crash]: your strtrim does not work with full blank input
-Test code:
-	char *s1 = "  \t \t \n   \n\n\n\t";
-	char *s2 = "";
-	char *ret = ft_strtrim(s1, " \n\t");
-
-	if (!strcmp(ret, s2))
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-
-ft_split:      [OK] [OK] [OK] [OK] [OK] [OK] [FAILED] [OK] [OK] {not protected}
-[fail]: your split does not work with basic input
-Test code:
-	char *s = "split  ||this|for|me|||||!|";
-	int i = 0;
-	char **result = ft_split(s, '|');
-
-	while (result[i])
-	{
-		if (strcmp(result[i], *expected))
-		{
-			exit(TEST_FAILED);
-		}
-		free(result[i]);
-		i++;
-		expected++;
-	}
-	free(result);
-	exit(TEST_SUCCESS);
-
-Diffs:
-       split: |!|
-    ft_split: ||
-
-ft_itoa:       [FAILED] [OK] [OK] [FAILED] [OK] [OK] [OK] [KO] [OK] 
-[fail]: your itoa does not work with basic input
-Test code:
-	char *i1 = ft_itoa(-623);
-	char *i2 = ft_itoa(156);
-	char *i3 = ft_itoa(-0);
-
-	if (strcmp(i1, "-623"))
-	{
-		exit(TEST_FAILED);
-	}
-	if (strcmp(i2, "156"))
-	{
-		exit(TEST_FAILED);
-	}
-	if (strcmp("0", i3))
-	{
-		exit(TEST_FAILED);
-	}
-	exit(TEST_SUCCESS);
-
-Diffs:
-        itoa: |0|
-     ft_itoa: ||
-
-[fail]: your itoa does not work with min int
-Test code:
-	char *i1 = ft_itoa((-2147483647 -1));
-
-	if (atoi(i1) != (-2147483647 -1))
-	{
-		exit(TEST_FAILED);
-	}
-	exit(TEST_SUCCESS);
-
-Diffs:
-        itoa: |-|
-     ft_itoa: |0|
-
-[KO]: your itoa does not allocate the good size so the \0 test may be false
-Test code:
-	int size;
-	char *i1;
-
-	i1 = ft_itoa(0);
-	size = get_last_malloc_size();
-	if (size == 2)
-		exit(TEST_SUCCESS);
-	exit(TEST_KO);
-
-Diffs:
-        itoa: |2|
-     ft_itoa: |1|
-
-ft_strmapi:    [OK] [OK] [OK] [OK] [CRASH] {protected}
-[crash]: you did not protect your malloc return
-Test code:
-	char *b = "override this !";
-
-	char *newstr = ft_strmapi(b, f_strmapi);
-	if (newstr == ((void *)0))
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED);
-
-
+ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
+ft_split:      [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
+ft_itoa:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strmapi:    [OK] [OK] [OK] [OK] [OK] {protected}
 ft_putchar_fd: [OK] [OK] [KO] 
 [KO]: your putchar_fd does not work with unicode
 Test code:
@@ -378,13 +80,45 @@ ft_putchar_fd: |Ã¸|
 
 ft_putstr_fd:  [OK] [OK] {not protected}
 ft_putendl_fd: [OK] [OK] {not protected}
-ft_putnbr_fd:  [MISSING]
-ft_lstnew:     [MISSING]
-ft_lstadd_front: [MISSING]
-ft_lstsize:    [MISSING]
-ft_lstlast:    [MISSING]
-ft_lstadd_back:[MISSING]
-ft_lstdelone:  [MISSING]
-ft_lstclear:   [MISSING]
-ft_lstiter:    [MISSING]
-ft_lstmap:     [MISSING]
+ft_putnbr_fd:  [OK] [OK] [OK] [OK] [OK] 
+ft_lstnew:     [OK] [OK] [OK] [OK] 
+ft_lstadd_front: [OK] [OK] [OK] 
+ft_lstsize:    [OK] [OK] 
+ft_lstlast:    [OK] [OK] 
+ft_lstadd_back:[OK] [OK] [OK] 
+ft_lstdelone:  [OK] 
+ft_lstclear:   [FAILED] [NO CRASH] [OK] 
+[fail]: your lstclear does not work with basic input
+Test code:
+	t_list *l = lstnew(strdup("nyancat"));
+
+	l->next = lstnew(strdup("#TEST#"));
+	ft_lstclear(&l, lstdelone_f);
+	write(2, "", 1);
+	if (!l)
+		exit(TEST_SUCCESS);
+	exit(TEST_FAILED);
+
+Diffs:
+    lstclear: |0x0|
+ ft_lstclear: |0x7ff9e6d001f0|
+
+[no crash]: your lstclear does not free the list
+Test code:
+	t_list *l = lstnew(strdup("nyancat"));
+	t_list *tmp;
+
+	l->next = lstnew(strdup("#TEST#"));
+	tmp = l->next;
+	ft_lstclear(&l, lstdelone_f);
+	write(2, "", 1);
+	if (!l)
+	{
+		free(tmp);
+		exit(TEST_SUCCESS);
+	}
+	exit(TEST_FAILED);
+
+
+ft_lstiter:    [OK] {protected}
+ft_lstmap:     [OK] {not protected}
