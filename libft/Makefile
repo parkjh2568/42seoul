@@ -6,7 +6,7 @@
 #    By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/09 20:04:40 by junhypar          #+#    #+#              #
-#    Updated: 2020/07/05 19:21:10 by junhypar         ###   ########.fr        #
+#    Updated: 2020/07/06 14:38:11 by junhypar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS2	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
 
 OBJS	= ${SRCS:.c=.o}
 
-OBJS2	= ${SRCS2: .c=.o}
+OBJS2	= ${SRCS2:.c=.o}
 
 CC		= gcc -Wall -Wextra -Werror
 
