@@ -52,7 +52,7 @@ ft_calloc:     [OK] [OK] [OK] [OK] [OK]
 ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_substr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
 ft_strjoin:    [OK] [OK] [OK] [OK] [OK] {not protected}
-ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
+ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
 ft_split:      [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
 ft_itoa:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strmapi:    [OK] [OK] [OK] [OK] [OK] {protected}
