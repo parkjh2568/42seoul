@@ -89,4 +89,4 @@ ft_lstadd_back:[OK] [OK] [OK]
 ft_lstdelone:  [OK] 
 ft_lstclear:   [OK] [OK] [OK] 
 ft_lstiter:    [OK] {protected}
-ft_lstmap:     [OK] {not protected}
+ft_lstmap:     [OK] {protected}
