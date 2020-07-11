@@ -16,7 +16,7 @@ ft_tolower:    [OK]
 ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_strlcpy:    [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
+ft_strlcpy:    [OK] [OK] [OK] [OK] [OK] [OK] {protected}
 ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strnstr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [KO] [KO] [OK] 
@@ -50,10 +50,10 @@ Diffs:
 
 ft_calloc:     [OK] [OK] [OK] [OK] [OK] 
 ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
-ft_substr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
-ft_strjoin:    [OK] [OK] [OK] [OK] [OK] {not protected}
+ft_substr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
+ft_strjoin:    [OK] [OK] [OK] [OK] [OK] {protected}
 ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
-ft_split:      [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {not protected}
+ft_split:      [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
 ft_itoa:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strmapi:    [OK] [OK] [OK] [OK] [OK] {protected}
 ft_putchar_fd: [OK] [OK] [KO] 
@@ -78,8 +78,8 @@ Diffs:
   putchar_fd: |ø|
 ft_putchar_fd: |Ã¸|
 
-ft_putstr_fd:  [OK] [OK] {not protected}
-ft_putendl_fd: [OK] [OK] {not protected}
+ft_putstr_fd:  [OK] [OK] {protected}
+ft_putendl_fd: [OK] [OK] {protected}
 ft_putnbr_fd:  [OK] [OK] [OK] [OK] [OK] 
 ft_lstnew:     [OK] [OK] [OK] [OK] 
 ft_lstadd_front: [OK] [OK] [OK] 

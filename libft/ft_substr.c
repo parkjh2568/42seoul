@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 10:22:59 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 13:20:16 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/11 14:21:57 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*out;
 	size_t			i;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	slen = ft_strlen((char *)s);
 	if (slen < start)

@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 11:48:49 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 11:55:45 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/11 14:32:53 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ int		count_numb(char const *s, char c)
 
 	numb = 0;
 	k = 0;
+	while (s[k])
+		k++;
+	if (k == 0)
+		return (0);
+	k = 0;
 	if (s[k] == c)
 		k++;
 	while (s[k])
@@ -58,7 +63,7 @@ int		count_numb(char const *s, char c)
 	return (numb);
 }
 
-char	**free_all(char **out, int j)
+void	free_all(char **out, int j)
 {
 	int		jj;
 
@@ -69,7 +74,32 @@ char	**free_all(char **out, int j)
 		jj++;
 	}
 	free(out);
-	return (NULL);
+}
+
+int		mk_split(char c, char const *s, char **out)
+{
+	int	i;
+	int j;
+
+	i = 0;
+	j = 0;
+	if (s[i] == c)
+		i++;
+	while (s[i])
+	{
+		if ((s[i] == c && s[i - 1] != c) || (s[i] != c && s[i + 1] == 0))
+		{
+			if (!(out[j] = ft_word(i, s, c)))
+			{
+				free_all(out, j);
+				return (-22);
+			}
+			j++;
+		}
+		i++;
+	}
+	out[j] = NULL;
+	return (22);
 }
 
 char	**ft_split(char const *s, char c)
@@ -79,24 +109,21 @@ char	**ft_split(char const *s, char c)
 	int		numb;
 	char	**out;
 
+	if (!s)
+		return (NULL);
 	numb = count_numb(s, c);
 	i = 0;
 	j = 0;
 	out = (char **)malloc(sizeof(char *) * (numb + 1));
 	if (out == NULL)
 		return (NULL);
-	if (s[i] == c)
-		i++;
-	while (s[i])
+	if (numb == 0)
 	{
-		if ((s[i] == c && s[i - 1] != c) || (s[i] != c && s[i + 1] == 0))
-		{
-			if (!(out[j] = ft_word(i, s, c)))
-				return (free_all(out, j));
-			j++;
-		}
-		i++;
+		out[0] = 0;
+		return (out);
 	}
-	out[j] = NULL;
-	return (out);
+	if (mk_split(c, s, out) > 0)
+		return (out);
+	else
+		return (NULL);
 }
