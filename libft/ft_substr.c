@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 10:22:59 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/02 14:42:17 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/11 13:20:16 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	slen = ft_strlen((char *)s);
+	if (slen < start)
+		return (ft_strdup(""));
 	if (slen >= start + len)
 	{
 		if (!(out = malloc(sizeof(char) * (len + 1))))
