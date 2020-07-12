@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 11:11:07 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/12 09:13:30 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/12 09:28:37 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int		all_same(char const *s1, char const *set)
 		count = 0;
 		j++;
 	}
+	if (j == 0)
+		return (0);
 	return (1);
 }
 
@@ -43,11 +45,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 	char	*out;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (NULL);
+	if (!set)
+		return (ft_strdup((char *)s1));
 	i = all_same(s1, set);
 	if (i != 0)
-		return ("");
+	{
+		out = malloc(sizeof(char));
+		out = 0;
+		return (out);
+	}
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	j = ft_strlen((char *)s1);
