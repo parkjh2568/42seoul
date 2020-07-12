@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 11:11:07 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 14:19:17 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/12 09:13:30 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*out;
 
 	if (!s1 || !set)
-		return (NULL);
-	if (!s1)
 		return (NULL);
 	i = all_same(s1, set);
 	if (i != 0)
