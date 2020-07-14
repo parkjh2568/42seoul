@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 10:22:59 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 14:21:57 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/14 16:02:23 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	i = 0;
 	slen = ft_strlen((char *)s);
-	if (slen < start)
+	if (slen < start || len <= 0 || slen == 0)
 		return (ft_strdup(""));
 	if (slen >= start + len)
 	{
@@ -37,5 +37,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (out);
 	}
 	else
-		return (NULL);
+		return (ft_strdup(""));
 }
