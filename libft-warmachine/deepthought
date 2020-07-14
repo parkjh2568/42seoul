@@ -1,16 +1,16 @@
 = Host-specific information ====================================================
 $> hostname; uname -msr
-c1r1s4.42seoul.kr
+c6r9s3.42seoul.kr
 Darwin 18.7.0 x86_64
 $> date
-Mon Jul 13 15:24:08 KST 2020
+Tue Jul 14 16:08:00 KST 2020
 $> gcc --version
-Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+Apple clang version 11.0.0 (clang-1100.0.33.17)
 Target: x86_64-apple-darwin18.7.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 $> clang --version
-Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+Apple clang version 11.0.0 (clang-1100.0.33.17)
 Target: x86_64-apple-darwin18.7.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
@@ -59,7 +59,7 @@ gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o
 ar rc libft.a ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memchr.o ft_memcmp.o ft_strlen.o ft_strlcpy.o ft_strlcat.o ft_strchr.o ft_strrchr.o ft_strnstr.o ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o ft_calloc.o ft_strdup.o ft_substr.o ft_strjoin.o ft_strtrim.o ft_split.o ft_itoa.o ft_strmapi.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o
 
 $> ls -la libft.a
--rw-r--r--  1 junhypar  2020_seoul  35448 Jul 13 15:24 /Users/junhypar/main/libft-warmachine/dirlibft/libft.a
+-rw-r--r--  1 junhypar  2020_seoul  35480 Jul 14 16:08 /Users/junhypar/42seoul/libft-warmachine/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
@@ -1393,7 +1393,7 @@ $> clang -Wextra -Wall -Werror  ft_lstmap.c main.c libft.a -o user_exe
 
 Undefined symbols for architecture x86_64:
   "_ft_lstnew", referenced from:
-      _ft_lstmap in ft_lstmap-82fb7f.o
+      _ft_lstmap in ft_lstmap-3ad9ff.o
      (maybe you meant: _ft_lstnewone)
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
