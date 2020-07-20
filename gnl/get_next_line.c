@@ -6,13 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 12:55:02 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/20 22:05:37 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	config(char *s)
+int		ft_config(char *s)
 {
 	int i;
 
@@ -26,7 +26,7 @@ int	config(char *s)
 	return (-22);
 }
 
-void print_line(char *out, char **line, int i)
+void	print_line(char *out, char **line, int i)
 {
 	int		j;
 	char	*s;
@@ -35,24 +35,24 @@ void print_line(char *out, char **line, int i)
 	s = malloc(sizeof(char) * j);
 	ft_strlcpy(*line, out, i);
 	ft_strlcpy(s, (out + i), j);
-	free (out);
+	free(out);
 	out = s;
 }
-#include <stdio.h>
-int get_next_line(int fd, char **line)
+
+int		get_next_line(int fd, char **line)
 {
 	char		buff[BUFFER_SIZE + 1];
 	static char	*out[50];
 	int			count;
 	int			i;
 
-	if (0 < fd || BUFFER_SIZE <= 0)
+	if (0 > fd || BUFFER_SIZE <= 0)
 		return (-1);
 	while ((count = read(fd, buff, BUFFER_SIZE)))
 	{
-		buff[count] = 0;
+		buff[count] = '\0';
 		out[fd] = ft_strjoin(out[fd], buff);
-		if ((i = config(out[fd])) >= 0)
+		if ((i = ft_config(out[fd])) >= 0)
 		{
 			print_line(out[fd], &*line, i);
 			return (1);

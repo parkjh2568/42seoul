@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 11:00:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 12:59:22 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/20 22:06:17 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,14 @@ int				config(char const *s1, char const *s2)
 {
 	if (!s1 && !s2)
 		return (0);
-	if (!s1 || !s2)
-
+	else if (!s1 || !s2)
+	{
+		if (!s1)
+			s1 = ft_strdup((char *)s2);
+	}
+	return (22);
 }
+
 char			*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*out;
@@ -82,8 +87,8 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	int		len2;
 	int		i;
 
-	if (!s1 && !s2)
-		return (NULL);
+	if (config(s1, s2))
+		return ((char *)s1);
 	i = 0;
 	len1 = ft_strlen((char *)s1);
 	len2 = ft_strlen((char *)s2);
