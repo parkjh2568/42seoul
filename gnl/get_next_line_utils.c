@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 11:00:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/22 16:20:03 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/22 17:15:26 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char			*ft_strdup(char *src)
 	return (a);
 }
 
-char			*ft_sj(char const *s1, char const *s2, int len1, int len2)
+char			*ft_sj(char *s1, char *s2, int len1, int len2)
 {
 	char	*out;
 	int		i;
@@ -88,21 +88,25 @@ char			*ft_sj(char const *s1, char const *s2, int len1, int len2)
 	return (out);
 }
 
-char			*ft_strjoin(char const *s1, char const *s2)
+char			*ft_strjoin(char *s1, char *s2)
 {
 	int		len1;
 	int		len2;
 	char	*outt;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
+		return (NULL);
+	else if (!s1 || !s2)
 	{
 		if (!s1)
-			outt = ft_strdup((char *)s2);
+			outt = ft_strdup(s2);
 		else
-			outt = ft_strdup((char *)s1);
+			outt = ft_strdup(s1);
 		return (outt);
 	}
-	len1 = ft_strlen((char *)s1);
-	len2 = ft_strlen((char *)s2);
-	return (ft_sj(s1, s2, len1, len2));
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	outt = ft_sj(s1, s2, len1, len2);
+	free(s1);
+	return (outt);
 }

@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:42:11 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/22 15:33:36 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/22 17:16:01 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int		get_next_line(int fd, char **line);
 size_t	ft_strlcpy(char *dest, char *src, size_t size);
 int		ft_strlen(char *str);
 char	*ft_strdup(char *src);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
 #endif

@@ -12,5 +12,14 @@ int main()
 	printf("\nresult = %s\n",li);
 	get_next_line(fd, &li);
 	printf("\nresult = %s\n",li);
+	get_next_line(fd, &li);
+	printf("\nresult = %s\n",li);
+	get_next_line(fd, &li);
+	printf("\nresult = %s\n",li);
+	get_next_line(fd, &li);
+	printf("\nresult = %s\n",li);
+	get_next_line(fd, &li);
+	printf("\nresult = %s\n",li);
+	get_next_line(fd, &li);
 	close(fd);
 }

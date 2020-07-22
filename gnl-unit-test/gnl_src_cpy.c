@@ -6,13 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 12:25:40 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/22 17:08:44 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include GNL_HEADER_CPY
 
-int	config(char *s)
+int		ft_config(char *s)
 {
 	int i;
 
@@ -26,38 +26,48 @@ int	config(char *s)
 	return (-22);
 }
 
-void print_line(char *out, char **line, int i)
+void	print_line(char **out, char **line, int i)
 {
 	int		j;
 	char	*s;
 
-	j = ft_strlen(out) - i;
-	s = malloc(sizeof(char) * j);
-	ft_strlcpy(*line, out, i);
-	ft_strlcpy(s, (out + i), j);
-	free (out);
-	out = s;
+	(*out)[i] = '\0';
+	*line = ft_strdup(*out);
+	j = ft_strlen(*out + i + 1);
+	if (j == 0)
+	{
+		free(*out);
+		*out = 0;
+	}
+	else
+	{
+		s = ft_strdup(*out + i + 1);
+		free(*out);
+		*out = s;
+	}
 }
 
-int get_next_line(int fd, char **line)
+int		get_next_line(int fd, char **line)
 {
 	char		buff[BUFFER_SIZE + 1];
 	static char	*out[50];
 	int			count;
 	int			i;
-	
-	if (0 < fd || !line || BUFFER_SIZE <= 0)
+
+	if (0 > fd || BUFFER_SIZE <= 0)
 		return (-1);
 	while ((count = read(fd, buff, BUFFER_SIZE)))
 	{
-		buff[count] = 0;
+		buff[count] = '\0';
 		out[fd] = ft_strjoin(out[fd], buff);
-		if ((i = config(out[fd])) >= 0)
+		if ((i = ft_config(out[fd])) >= 0)
 		{
-			print_line(out[fd], &*line, i);
+			print_line(&out[fd], line, i);
 			return (1);
 		}
 	}
-	print_line(out[fd], &*line, i);
+	print_line(&out[fd], line, i);
+	free(out[fd]);
+	out[fd] = NULL;
 	return (0);
 }

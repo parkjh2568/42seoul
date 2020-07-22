@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/22 16:56:03 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/22 17:24:12 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,11 @@ void	print_line(char **out, char **line, int i)
 		free(*out);
 		*out = s;
 	}
+}
+
+int		final_print(char **out, char **line, int i)
+{
+
 }
 
 int		get_next_line(int fd, char **line)
