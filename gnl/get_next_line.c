@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/22 17:29:14 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/22 17:31:11 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int		final_print(char **out, char **line, int i)
 		return (-1);
 	if (*out && (ft_config(*out) >= 0))
 	{
-		print_line(&out[fd],line, ft_config(*out));
+		print_line(out,line, ft_config(*out));
 		return (1);
 	}
 	else if (*out)
@@ -85,5 +85,5 @@ int		get_next_line(int fd, char **line)
 			return (1);
 		}
 	}
-	return (final_print(&out[fd], line, count);
+	return (final_print(&out[fd], line, count));
 }
