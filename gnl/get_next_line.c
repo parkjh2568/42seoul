@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/20 22:05:37 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/22 16:30:43 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,14 @@ void	print_line(char *out, char **line, int i)
 	int		j;
 	char	*s;
 
+	i = i + 1;
 	j = ft_strlen(out) - i;
 	s = malloc(sizeof(char) * j);
 	ft_strlcpy(*line, out, i);
 	ft_strlcpy(s, (out + i), j);
 	free(out);
-	out = s;
+	out = ft_strdup(s);
+	free(s);
 }
 
 int		get_next_line(int fd, char **line)

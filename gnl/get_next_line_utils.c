@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 11:00:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/20 22:06:17 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/22 16:20:03 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,42 +68,41 @@ char			*ft_strdup(char *src)
 	return (a);
 }
 
-int				config(char const *s1, char const *s2)
-{
-	if (!s1 && !s2)
-		return (0);
-	else if (!s1 || !s2)
-	{
-		if (!s1)
-			s1 = ft_strdup((char *)s2);
-	}
-	return (22);
-}
-
-char			*ft_strjoin(char const *s1, char const *s2)
+char			*ft_sj(char const *s1, char const *s2, int len1, int len2)
 {
 	char	*out;
-	int		len1;
-	int		len2;
 	int		i;
 
-	if (config(s1, s2))
-		return ((char *)s1);
 	i = 0;
-	len1 = ft_strlen((char *)s1);
-	len2 = ft_strlen((char *)s2);
 	if (!(out = malloc(sizeof(char) * (len1 + len2 + 1))))
 		return (NULL);
-	while (i < len1)
-	{
-		out[i] = s1[i];
-		i++;
-	}
 	while (i < len1 + len2)
 	{
-		out[i] = s2[i - len1];
+		if (i < len1)
+			out[i] = s1[i];
+		else
+			out[i] = s2[i - len1];
 		i++;
 	}
 	out[i] = 0;
 	return (out);
+}
+
+char			*ft_strjoin(char const *s1, char const *s2)
+{
+	int		len1;
+	int		len2;
+	char	*outt;
+
+	if (!s1 || !s2)
+	{
+		if (!s1)
+			outt = ft_strdup((char *)s2);
+		else
+			outt = ft_strdup((char *)s1);
+		return (outt);
+	}
+	len1 = ft_strlen((char *)s1);
+	len2 = ft_strlen((char *)s2);
+	return (ft_sj(s1, s2, len1, len2));
 }

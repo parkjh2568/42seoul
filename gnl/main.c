@@ -3,12 +3,14 @@
 #include <stdio.h>
 int main()
 {
-	int fd, i;
+	int fd;
 	char *li;
 	li = malloc(sizeof(char));
 	li[0] = '1';
 	fd = open("a.txt",O_RDONLY);
 	get_next_line(fd, &li);
-	printf("%s",li);
+	printf("\nresult = %s\n",li);
+	get_next_line(fd, &li);
+	printf("\nresult = %s\n",li);
 	close(fd);
 }
