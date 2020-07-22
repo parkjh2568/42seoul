@@ -7,7 +7,7 @@ int main()
 	char *li;
 	li = malloc(sizeof(char));
 	li[0] = '1';
-	fd = open("a.txt",O_RDONLY);
+	fd = open("b.txt",O_RDONLY);
 	get_next_line(fd, &li);
 	printf("\nresult = %s\n",li);
 	get_next_line(fd, &li);
