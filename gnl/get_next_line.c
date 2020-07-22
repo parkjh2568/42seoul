@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/22 17:31:11 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/22 17:32:22 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int		final_print(char **out, char **line, int i)
 		return (-1);
 	if (*out && (ft_config(*out) >= 0))
 	{
-		print_line(out,line, ft_config(*out));
+		print_line(out, line, ft_config(*out));
 		return (1);
 	}
 	else if (*out)
