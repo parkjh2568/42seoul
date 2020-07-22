@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/22 16:30:43 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/22 16:35:02 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int		ft_config(char *s)
 	return (-22);
 }
 
-void	print_line(char *out, char **line, int i)
+char	*print_line(char *out, char **line, int i)
 {
 	int		j;
 	char	*s;
@@ -35,10 +35,9 @@ void	print_line(char *out, char **line, int i)
 	j = ft_strlen(out) - i;
 	s = malloc(sizeof(char) * j);
 	ft_strlcpy(*line, out, i);
-	ft_strlcpy(s, (out + i), j);
+	ft_strlcpy(s, (out + i), j + 1);
 	free(out);
-	out = ft_strdup(s);
-	free(s);
+	return (s);
 }
 
 int		get_next_line(int fd, char **line)
@@ -56,10 +55,10 @@ int		get_next_line(int fd, char **line)
 		out[fd] = ft_strjoin(out[fd], buff);
 		if ((i = ft_config(out[fd])) >= 0)
 		{
-			print_line(out[fd], &*line, i);
+			out[fd] = print_line(out[fd], &*line, i);
 			return (1);
 		}
 	}
-	print_line(out[fd], &*line, i);
+	out[fd] = print_line(out[fd], &*line, i);
 	return (0);
 }
