@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 11:00:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/23 14:49:17 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/23 14:52:56 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ size_t			ft_strlcpy(char *dest, char *src, size_t size)
 	if (!dest || !src)
 		return (0);
 	a = 0;
+	b = 0;
 	if (size != 0)
 	{
 		while (src[a] && a < size - 1)
