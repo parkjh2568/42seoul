@@ -3,7 +3,7 @@ $> hostname; uname -msr
 c6r9s3.42seoul.kr
 Darwin 18.7.0 x86_64
 $> date
-Wed Jul 22 18:03:32 KST 2020
+Thu Jul 23 14:14:06 KST 2020
 $> gcc --version
 Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/4.2.1
 Apple clang version 11.0.0 (clang-1100.0.33.17)
@@ -229,7 +229,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_Mr
 Diff OK :D
 $> ./BUFF_1 tests/63_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_63_line	2020-07-22 18:03:35.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_63_line	2020-07-23 14:14:08.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejio$
@@ -238,7 +238,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_63
 Diff KO :(
 $> ./BUFF_1 tests/lorem_ipsum 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_lorem_ipsum	2020-07-22 18:03:35.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_lorem_ipsum	2020-07-23 14:14:08.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -13,3 +13,4 @@$
  Donec ac varius libero. Nullam orci lectus, lobortis sed justo quis, dapibus condimentum lectus. Aenean in bibendum elit, vitae congue neque. Vestibulum id lobortis quam. Maecenas lacinia volutpat est, ac dapibus augue posuere a. In hendrerit eget sem in accumsan. Maecenas sit amet maximus ipsum. Aenean ut lobortis nunc. Praesent tincidunt nisl egestas vulputate semper. Nunc ligula nisi, scelerisque congue lacinia eu, dictum quis massa. Sed tempus et quam sit amet rhoncus.$
@@ -261,7 +261,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_ma
 Diff OK :D
 $> ./BUFF_1 tests/64_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_64_line	2020-07-22 18:03:35.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_64_line	2020-07-23 14:14:08.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioa$
@@ -274,7 +274,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_em
 Diff OK :D
 $> ./BUFF_1 tests/multi_in_one 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_multi_in_one	2020-07-22 18:03:35.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_multi_in_one	2020-07-23 14:14:08.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -5,3 +5,4 @@$
  nhu$
@@ -297,7 +297,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_on
 Diff OK :D
 $> ./BUFF_1 tests/65_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_65_line	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_65_line	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioaa$
@@ -310,7 +310,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_ex
 Diff OK :D
 $> ./BUFF_1 tests/over_buffer 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_over_buffer	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_over_buffer	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -2,3 +2,4 @@$
  mweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiw2$
@@ -356,7 +356,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_M
 Diff OK :D
 $> ./BUFF_16 tests/63_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_63_line	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_63_line	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejio$
@@ -365,7 +365,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_6
 Diff KO :(
 $> ./BUFF_16 tests/lorem_ipsum 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_lorem_ipsum	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_lorem_ipsum	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -13,3 +13,4 @@$
  Donec ac varius libero. Nullam orci lectus, lobortis sed justo quis, dapibus condimentum lectus. Aenean in bibendum elit, vitae congue neque. Vestibulum id lobortis quam. Maecenas lacinia volutpat est, ac dapibus augue posuere a. In hendrerit eget sem in accumsan. Maecenas sit amet maximus ipsum. Aenean ut lobortis nunc. Praesent tincidunt nisl egestas vulputate semper. Nunc ligula nisi, scelerisque congue lacinia eu, dictum quis massa. Sed tempus et quam sit amet rhoncus.$
@@ -388,7 +388,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_m
 Diff OK :D
 $> ./BUFF_16 tests/64_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_64_line	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_64_line	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioa$
@@ -401,7 +401,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_e
 Diff OK :D
 $> ./BUFF_16 tests/multi_in_one 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_multi_in_one	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_multi_in_one	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -5,3 +5,4 @@$
  nhu$
@@ -424,7 +424,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_o
 Diff OK :D
 $> ./BUFF_16 tests/65_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_65_line	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_65_line	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioaa$
@@ -437,7 +437,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_e
 Diff OK :D
 $> ./BUFF_16 tests/over_buffer 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_over_buffer	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_over_buffer	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -2,3 +2,4 @@$
  mweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiw2$
@@ -483,7 +483,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_M
 Diff OK :D
 $> ./BUFF_32 tests/63_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_63_line	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_63_line	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejio$
@@ -492,7 +492,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_6
 Diff KO :(
 $> ./BUFF_32 tests/lorem_ipsum 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_lorem_ipsum	2020-07-22 18:03:37.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_lorem_ipsum	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -13,3 +13,4 @@$
  Donec ac varius libero. Nullam orci lectus, lobortis sed justo quis, dapibus condimentum lectus. Aenean in bibendum elit, vitae congue neque. Vestibulum id lobortis quam. Maecenas lacinia volutpat est, ac dapibus augue posuere a. In hendrerit eget sem in accumsan. Maecenas sit amet maximus ipsum. Aenean ut lobortis nunc. Praesent tincidunt nisl egestas vulputate semper. Nunc ligula nisi, scelerisque congue lacinia eu, dictum quis massa. Sed tempus et quam sit amet rhoncus.$
@@ -515,7 +515,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_m
 Diff OK :D
 $> ./BUFF_32 tests/64_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_64_line	2020-07-22 18:03:38.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_64_line	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioa$
@@ -528,7 +528,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_e
 Diff OK :D
 $> ./BUFF_32 tests/multi_in_one 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_multi_in_one	2020-07-22 18:03:38.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_multi_in_one	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -5,3 +5,4 @@$
  nhu$
@@ -551,7 +551,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_o
 Diff OK :D
 $> ./BUFF_32 tests/65_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_65_line	2020-07-22 18:03:38.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_65_line	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioaa$
@@ -564,7 +564,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_e
 Diff OK :D
 $> ./BUFF_32 tests/over_buffer 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_over_buffer	2020-07-22 18:03:38.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_over_buffer	2020-07-23 14:14:11.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -2,3 +2,4 @@$
  mweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiw2$
@@ -610,7 +610,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_M
 Diff OK :D
 $> ./BUFF_48 tests/63_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_63_line	2020-07-22 18:03:39.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_63_line	2020-07-23 14:14:12.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejio$
@@ -619,7 +619,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_6
 Diff KO :(
 $> ./BUFF_48 tests/lorem_ipsum 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_lorem_ipsum	2020-07-22 18:03:39.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_lorem_ipsum	2020-07-23 14:14:12.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -13,3 +13,4 @@$
  Donec ac varius libero. Nullam orci lectus, lobortis sed justo quis, dapibus condimentum lectus. Aenean in bibendum elit, vitae congue neque. Vestibulum id lobortis quam. Maecenas lacinia volutpat est, ac dapibus augue posuere a. In hendrerit eget sem in accumsan. Maecenas sit amet maximus ipsum. Aenean ut lobortis nunc. Praesent tincidunt nisl egestas vulputate semper. Nunc ligula nisi, scelerisque congue lacinia eu, dictum quis massa. Sed tempus et quam sit amet rhoncus.$
@@ -642,7 +642,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_m
 Diff OK :D
 $> ./BUFF_48 tests/64_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_64_line	2020-07-22 18:03:39.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_64_line	2020-07-23 14:14:12.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioa$
@@ -655,7 +655,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_e
 Diff OK :D
 $> ./BUFF_48 tests/multi_in_one 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_multi_in_one	2020-07-22 18:03:39.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_multi_in_one	2020-07-23 14:14:12.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -5,3 +5,4 @@$
  nhu$
@@ -678,7 +678,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_o
 Diff OK :D
 $> ./BUFF_48 tests/65_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_65_line	2020-07-22 18:03:39.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_65_line	2020-07-23 14:14:13.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioaa$
@@ -691,7 +691,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_e
 Diff OK :D
 $> ./BUFF_48 tests/over_buffer 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_over_buffer	2020-07-22 18:03:39.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_over_buffer	2020-07-23 14:14:13.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -2,3 +2,4 @@$
  mweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiw2$
@@ -737,7 +737,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999
 Diff OK :D
 $> ./BUFF_9999 tests/63_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_63_line	2020-07-22 18:03:44.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_63_line	2020-07-23 14:14:18.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejio$
@@ -746,7 +746,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999
 Diff KO :(
 $> ./BUFF_9999 tests/lorem_ipsum 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_lorem_ipsum	2020-07-22 18:03:44.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_lorem_ipsum	2020-07-23 14:14:18.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -13,3 +13,4 @@$
  Donec ac varius libero. Nullam orci lectus, lobortis sed justo quis, dapibus condimentum lectus. Aenean in bibendum elit, vitae congue neque. Vestibulum id lobortis quam. Maecenas lacinia volutpat est, ac dapibus augue posuere a. In hendrerit eget sem in accumsan. Maecenas sit amet maximus ipsum. Aenean ut lobortis nunc. Praesent tincidunt nisl egestas vulputate semper. Nunc ligula nisi, scelerisque congue lacinia eu, dictum quis massa. Sed tempus et quam sit amet rhoncus.$
@@ -769,7 +769,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999
 Diff OK :D
 $> ./BUFF_9999 tests/64_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_64_line	2020-07-22 18:03:44.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_64_line	2020-07-23 14:14:18.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioa$
@@ -782,7 +782,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999
 Diff OK :D
 $> ./BUFF_9999 tests/multi_in_one 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_multi_in_one	2020-07-22 18:03:44.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_multi_in_one	2020-07-23 14:14:18.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -5,3 +5,4 @@$
  nhu$
@@ -805,7 +805,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999
 Diff OK :D
 $> ./BUFF_9999 tests/65_line 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_65_line	2020-07-22 18:03:44.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_65_line	2020-07-23 14:14:18.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -1 +1,2 @@$
  aaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioazeaaazejioaa$
@@ -818,7 +818,7 @@ $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999
 Diff OK :D
 $> ./BUFF_9999 tests/over_buffer 0
 $> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output
---- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_over_buffer	2020-07-22 18:03:44.000000000 +0900$
+--- /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_9999_over_buffer	2020-07-23 14:14:18.000000000 +0900$
 +++ /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output	2020-07-14 15:56:15.000000000 +0900$
 @@ -2,3 +2,4 @@$
  mweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiwmweiljwmeoriwermeoiw2$
