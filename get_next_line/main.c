@@ -5,7 +5,7 @@ int main()
 {
 	int fd;
 	char *li;
-	fd = open("d.txt.output",O_RDONLY);
+	fd = open("e",O_RDONLY);
 	while (get_next_line(fd, &li) >0)
 	{
 	printf("%s\n",li);
