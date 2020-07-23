@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 11:00:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/23 14:52:56 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/23 15:55:36 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,14 +86,8 @@ char			*ft_strjoin(char *s1, char *s2)
 	i = 0;
 	if (!(out = malloc(sizeof(char) * (len1 + len2 + 1))))
 		return (NULL);
-	while (i < len1 + len2)
-	{
-		if (i < len1)
-			out[i] = s1[i];
-		else
-			out[i] = s2[i - len1];
-		i++;
-	}
+	ft_strlcpy(out, s1, len1 + 1);
 	free(s1);
+	ft_strlcpy(out + len1, s2, len2 + 1);
 	return (out);
 }
