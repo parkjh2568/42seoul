@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/23 14:18:46 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/23 14:32:30 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,8 @@ int		final_print(char **out, char **line, int i)
 	}
 	else if (*out)
 	{
-		*line = ft_strdup(*out);
-		free(*out);
-		out = 0;
+		*line = *out;
+		*out = 0;
 		return (0);
 	}
 	*line = ft_strdup("");
