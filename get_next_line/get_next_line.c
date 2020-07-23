@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/23 14:32:30 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/23 15:17:58 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int		get_next_line(int fd, char **line)
 
 	if (0 > fd || BUFFER_SIZE <= 0)
 		return (-1);
-	while ((count = read(fd, buff, BUFFER_SIZE)))
+	while ((count = read(fd, buff, BUFFER_SIZE)) > 0)
 	{
 		buff[count] = '\0';
 		out[fd] = ft_strjoin(out[fd], buff);
