@@ -10,16 +10,24 @@ int main()
 	fd = open("c.txt",O_RDONLY);
 	get_next_line(fd, &li);
 	printf("\nresult = %s\n",li);
+	free(li);
 	get_next_line(fd, &li);
 	printf("\nresult = %s\n",li);
+	free(li);
 	get_next_line(fd, &li);
 	printf("\nresult = %s\n",li);
+	free(li);
 	get_next_line(fd, &li);
 	printf("\nresult = %s\n",li);
+	free(li);
 	get_next_line(fd, &li);
 	printf("\nresult = %s\n",li);
+	free(li);
 	get_next_line(fd, &li);
 	printf("\nresult = %s\n",li);
+	free(li);
 	get_next_line(fd, &li);
+	printf("\nresult = %s\n", li);
 	close(fd);
+	free(li);
 }

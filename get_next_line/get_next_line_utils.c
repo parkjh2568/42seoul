@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 11:00:27 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/23 14:32:00 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/07/23 14:49:17 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,9 @@ size_t			ft_strlcpy(char *dest, char *src, size_t size)
 	size_t a;
 	size_t b;
 
+	if (!dest || !src)
+		return (0);
 	a = 0;
-	b = 0;
 	if (size != 0)
 	{
 		while (src[a] && a < size - 1)
@@ -68,11 +69,19 @@ char			*ft_strdup(char *src)
 	return (a);
 }
 
-char			*ft_sj(char *s1, char *s2, int len1, int len2)
+char			*ft_strjoin(char *s1, char *s2)
 {
-	char	*out;
+	int		len1;
+	int		len2;
 	int		i;
+	char	*out;
 
+	if (!s1 && !s2)
+		return (NULL);
+	else if (!s1 || !s2)
+		return (!s1 ? ft_strdup(s2) : ft_strdup(s1));
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
 	i = 0;
 	if (!(out = malloc(sizeof(char) * (len1 + len2 + 1))))
 		return (NULL);
@@ -84,30 +93,6 @@ char			*ft_sj(char *s1, char *s2, int len1, int len2)
 			out[i] = s2[i - len1];
 		i++;
 	}
-	out[i] = 0;
-	return (out);
-}
-
-char			*ft_strjoin(char *s1, char *s2)
-{
-	int		len1;
-	int		len2;
-	char	*outt;
-
-	if (!s1 && !s2)
-		return (NULL);
-	else if (!s1 || !s2)
-	{
-		if (!s1)
-			outt = ft_strdup(s2);
-		else
-			outt = s1;
-		return (outt);
-	}
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	outt = ft_sj(s1, s2, len1, len2);
 	free(s1);
-	s1 = 0;
-	return (outt);
+	return (out);
 }
