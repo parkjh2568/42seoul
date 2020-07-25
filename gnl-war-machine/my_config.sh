@@ -57,6 +57,7 @@ BUFFER_SIZE=(
 	16
 	32
 	48
+	9999
 )
 
 NORM=1

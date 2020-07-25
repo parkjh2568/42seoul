@@ -1,24 +1,24 @@
 = Host-specific information ====================================================
 $> hostname; uname -msr
-c6r9s3.42seoul.kr
+c2r5s1.42seoul.kr
 Darwin 18.7.0 x86_64
 $> date
-Thu Jul 23 16:00:14 KST 2020
+Sat Jul 25 16:06:09 KST 2020
 $> gcc --version
-Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/4.2.1
-Apple clang version 11.0.0 (clang-1100.0.33.17)
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1
+Apple LLVM version 10.0.1 (clang-1001.0.46.4)
 Target: x86_64-apple-darwin18.7.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 $> clang --version
-Apple clang version 11.0.0 (clang-1100.0.33.17)
+Apple LLVM version 10.0.1 (clang-1001.0.46.4)
 Target: x86_64-apple-darwin18.7.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 
-$> cp ../get_next_line/get_next_line.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line.c
-$> cp ../get_next_line/get_next_line.h /Users/junhypar/42seoul/gnl-war-machine/get_next_line.h
-$> cp ../get_next_line/get_next_line_utils.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line_utils.c
+$> cp ../get_next_line/get_next_line.c /Users/junhypar/main/gnl-war-machine/get_next_line.c
+$> cp ../get_next_line/get_next_line.h /Users/junhypar/main/gnl-war-machine/get_next_line.h
+$> cp ../get_next_line/get_next_line_utils.c /Users/junhypar/main/gnl-war-machine/get_next_line_utils.c
 
 get_next_line.c ===================================================
 $> norminette ../get_next_line/get_next_line.c | grep -E '(Error|Warning)'
@@ -30,542 +30,632 @@ get_next_line_utils.c ===================================================
 $> norminette ../get_next_line/get_next_line_utils.c | grep -E '(Error|Warning)'
 
 BUFFER_SIZE=-1 ===================================================
-$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=-1 -o BUFF_-1
+$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/main/gnl-war-machine/get_next_line.c /Users/junhypar/main/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=-1 -o BUFF_-1
 $> ./BUFF_-1 tests/line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_line.txt /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/n.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_n.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_n.txt /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/void.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_void.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_void.txt /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/Mr._Justice_Maxell_by_Edgar_Wallace.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/63_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_63_line /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/lorem_ipsum 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_lorem_ipsum /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/63_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_63_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_63_line_nl /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/baudelaire.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_baudelaire.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_baudelaire.txt /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/many_lines 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_many_lines /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_many_lines /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/64_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_64_line /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/empty 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_empty /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_empty /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/multi_in_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_multi_in_one /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/64_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_64_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_64_line_nl /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/empty_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_empty_one /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_empty_one /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/one_big_fat_line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_one_big_fat_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_one_big_fat_line.txt /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/65_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_65_line /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/expected_result 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_expected_result /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_expected_result /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/over_buffer 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_over_buffer /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/65_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_65_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_65_line_nl /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/large_file.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_large_file.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_large_file.txt /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
 $> ./BUFF_-1 tests/simple 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_-1_simple /Users/junhypar/42seoul/gnl-war-machine/tests/buff_-1.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_-1_simple /Users/junhypar/main/gnl-war-machine/tests/buff_-1.output
 
 Diff OK :D
-$> ./BUFF_-1 /Users/junhypar/42seoul/gnl-war-machine/tests/line.txt 1
+$> ./BUFF_-1 /Users/junhypar/main/gnl-war-machine/tests/line.txt 1
 
 LEAKS OK :D
 
 BUFFER_SIZE=0 ===================================================
-$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=0 -o BUFF_0
+$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/main/gnl-war-machine/get_next_line.c /Users/junhypar/main/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=0 -o BUFF_0
 $> ./BUFF_0 tests/line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_line.txt /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/n.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_n.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_n.txt /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/void.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_void.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_void.txt /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/Mr._Justice_Maxell_by_Edgar_Wallace.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/63_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_63_line /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/lorem_ipsum 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_lorem_ipsum /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/63_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_63_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_63_line_nl /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/baudelaire.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_baudelaire.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_baudelaire.txt /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/many_lines 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_many_lines /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_many_lines /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/64_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_64_line /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/empty 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_empty /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_empty /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/multi_in_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_multi_in_one /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/64_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_64_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_64_line_nl /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/empty_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_empty_one /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_empty_one /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/one_big_fat_line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_one_big_fat_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_one_big_fat_line.txt /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/65_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_65_line /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/expected_result 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_expected_result /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_expected_result /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/over_buffer 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_over_buffer /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/65_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_65_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_65_line_nl /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/large_file.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_large_file.txt /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_large_file.txt /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
 $> ./BUFF_0 tests/simple 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_0_simple /Users/junhypar/42seoul/gnl-war-machine/tests/buff_0.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_0_simple /Users/junhypar/main/gnl-war-machine/tests/buff_0.output
 
 Diff OK :D
-$> ./BUFF_0 /Users/junhypar/42seoul/gnl-war-machine/tests/line.txt 1
+$> ./BUFF_0 /Users/junhypar/main/gnl-war-machine/tests/line.txt 1
 
 LEAKS OK :D
 
 BUFFER_SIZE=1 ===================================================
-$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=1 -o BUFF_1
+$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/main/gnl-war-machine/get_next_line.c /Users/junhypar/main/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=1 -o BUFF_1
 $> ./BUFF_1 tests/line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_line.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_line.txt.output
 
 Diff OK :D
 $> ./BUFF_1 tests/n.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_n.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_n.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_n.txt /Users/junhypar/main/gnl-war-machine/tests/default_n.txt.output
 
 Diff OK :D
 $> ./BUFF_1 tests/void.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_void.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_void.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_void.txt /Users/junhypar/main/gnl-war-machine/tests/default_void.txt.output
 
 Diff OK :D
 $> ./BUFF_1 tests/Mr._Justice_Maxell_by_Edgar_Wallace.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_Mr._Justice_Maxell_by_Edgar_Wallace.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/main/gnl-war-machine/tests/default_Mr._Justice_Maxell_by_Edgar_Wallace.txt.output
 
 Diff OK :D
 $> ./BUFF_1 tests/63_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_63_line /Users/junhypar/main/gnl-war-machine/tests/default_63_line.output
 
 Diff OK :D
 $> ./BUFF_1 tests/lorem_ipsum 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_lorem_ipsum /Users/junhypar/main/gnl-war-machine/tests/default_lorem_ipsum.output
 
 Diff OK :D
 $> ./BUFF_1 tests/63_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_63_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_63_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_63_line_nl.output
 
 Diff OK :D
 $> ./BUFF_1 tests/baudelaire.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_baudelaire.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_baudelaire.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_baudelaire.txt /Users/junhypar/main/gnl-war-machine/tests/default_baudelaire.txt.output
 
 Diff OK :D
 $> ./BUFF_1 tests/many_lines 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_many_lines /Users/junhypar/42seoul/gnl-war-machine/tests/default_many_lines.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_many_lines /Users/junhypar/main/gnl-war-machine/tests/default_many_lines.output
 
 Diff OK :D
 $> ./BUFF_1 tests/64_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_64_line /Users/junhypar/main/gnl-war-machine/tests/default_64_line.output
 
 Diff OK :D
 $> ./BUFF_1 tests/empty 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_empty /Users/junhypar/42seoul/gnl-war-machine/tests/default_empty.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_empty /Users/junhypar/main/gnl-war-machine/tests/default_empty.output
 
 Diff OK :D
 $> ./BUFF_1 tests/multi_in_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_multi_in_one /Users/junhypar/main/gnl-war-machine/tests/default_multi_in_one.output
 
 Diff OK :D
 $> ./BUFF_1 tests/64_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_64_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_64_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_64_line_nl.output
 
 Diff OK :D
 $> ./BUFF_1 tests/empty_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_empty_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_empty_one.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_empty_one /Users/junhypar/main/gnl-war-machine/tests/default_empty_one.output
 
 Diff OK :D
 $> ./BUFF_1 tests/one_big_fat_line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_one_big_fat_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_one_big_fat_line.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_one_big_fat_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_one_big_fat_line.txt.output
 
 Diff OK :D
 $> ./BUFF_1 tests/65_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_65_line /Users/junhypar/main/gnl-war-machine/tests/default_65_line.output
 
 Diff OK :D
 $> ./BUFF_1 tests/expected_result 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_expected_result /Users/junhypar/42seoul/gnl-war-machine/tests/default_expected_result.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_expected_result /Users/junhypar/main/gnl-war-machine/tests/default_expected_result.output
 
 Diff OK :D
 $> ./BUFF_1 tests/over_buffer 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_over_buffer /Users/junhypar/main/gnl-war-machine/tests/default_over_buffer.output
 
 Diff OK :D
 $> ./BUFF_1 tests/65_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_65_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_65_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_65_line_nl.output
 
 Diff OK :D
 $> ./BUFF_1 tests/large_file.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_large_file.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_large_file.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_large_file.txt /Users/junhypar/main/gnl-war-machine/tests/default_large_file.txt.output
 
 Diff OK :D
 $> ./BUFF_1 tests/simple 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_1_simple /Users/junhypar/42seoul/gnl-war-machine/tests/default_simple.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_1_simple /Users/junhypar/main/gnl-war-machine/tests/default_simple.output
 
 Diff OK :D
-$> ./BUFF_1 /Users/junhypar/42seoul/gnl-war-machine/tests/line.txt 1
+$> ./BUFF_1 /Users/junhypar/main/gnl-war-machine/tests/line.txt 1
 
 LEAKS OK :D
 
 BUFFER_SIZE=16 ===================================================
-$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=16 -o BUFF_16
+$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/main/gnl-war-machine/get_next_line.c /Users/junhypar/main/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=16 -o BUFF_16
 $> ./BUFF_16 tests/line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_line.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_line.txt.output
 
 Diff OK :D
 $> ./BUFF_16 tests/n.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_n.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_n.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_n.txt /Users/junhypar/main/gnl-war-machine/tests/default_n.txt.output
 
 Diff OK :D
 $> ./BUFF_16 tests/void.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_void.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_void.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_void.txt /Users/junhypar/main/gnl-war-machine/tests/default_void.txt.output
 
 Diff OK :D
 $> ./BUFF_16 tests/Mr._Justice_Maxell_by_Edgar_Wallace.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_Mr._Justice_Maxell_by_Edgar_Wallace.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/main/gnl-war-machine/tests/default_Mr._Justice_Maxell_by_Edgar_Wallace.txt.output
 
 Diff OK :D
 $> ./BUFF_16 tests/63_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_63_line /Users/junhypar/main/gnl-war-machine/tests/default_63_line.output
 
 Diff OK :D
 $> ./BUFF_16 tests/lorem_ipsum 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_lorem_ipsum /Users/junhypar/main/gnl-war-machine/tests/default_lorem_ipsum.output
 
 Diff OK :D
 $> ./BUFF_16 tests/63_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_63_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_63_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_63_line_nl.output
 
 Diff OK :D
 $> ./BUFF_16 tests/baudelaire.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_baudelaire.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_baudelaire.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_baudelaire.txt /Users/junhypar/main/gnl-war-machine/tests/default_baudelaire.txt.output
 
 Diff OK :D
 $> ./BUFF_16 tests/many_lines 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_many_lines /Users/junhypar/42seoul/gnl-war-machine/tests/default_many_lines.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_many_lines /Users/junhypar/main/gnl-war-machine/tests/default_many_lines.output
 
 Diff OK :D
 $> ./BUFF_16 tests/64_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_64_line /Users/junhypar/main/gnl-war-machine/tests/default_64_line.output
 
 Diff OK :D
 $> ./BUFF_16 tests/empty 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_empty /Users/junhypar/42seoul/gnl-war-machine/tests/default_empty.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_empty /Users/junhypar/main/gnl-war-machine/tests/default_empty.output
 
 Diff OK :D
 $> ./BUFF_16 tests/multi_in_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_multi_in_one /Users/junhypar/main/gnl-war-machine/tests/default_multi_in_one.output
 
 Diff OK :D
 $> ./BUFF_16 tests/64_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_64_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_64_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_64_line_nl.output
 
 Diff OK :D
 $> ./BUFF_16 tests/empty_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_empty_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_empty_one.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_empty_one /Users/junhypar/main/gnl-war-machine/tests/default_empty_one.output
 
 Diff OK :D
 $> ./BUFF_16 tests/one_big_fat_line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_one_big_fat_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_one_big_fat_line.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_one_big_fat_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_one_big_fat_line.txt.output
 
 Diff OK :D
 $> ./BUFF_16 tests/65_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_65_line /Users/junhypar/main/gnl-war-machine/tests/default_65_line.output
 
 Diff OK :D
 $> ./BUFF_16 tests/expected_result 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_expected_result /Users/junhypar/42seoul/gnl-war-machine/tests/default_expected_result.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_expected_result /Users/junhypar/main/gnl-war-machine/tests/default_expected_result.output
 
 Diff OK :D
 $> ./BUFF_16 tests/over_buffer 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_over_buffer /Users/junhypar/main/gnl-war-machine/tests/default_over_buffer.output
 
 Diff OK :D
 $> ./BUFF_16 tests/65_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_65_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_65_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_65_line_nl.output
 
 Diff OK :D
 $> ./BUFF_16 tests/large_file.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_large_file.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_large_file.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_large_file.txt /Users/junhypar/main/gnl-war-machine/tests/default_large_file.txt.output
 
 Diff OK :D
 $> ./BUFF_16 tests/simple 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_16_simple /Users/junhypar/42seoul/gnl-war-machine/tests/default_simple.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_16_simple /Users/junhypar/main/gnl-war-machine/tests/default_simple.output
 
 Diff OK :D
-$> ./BUFF_16 /Users/junhypar/42seoul/gnl-war-machine/tests/line.txt 1
+$> ./BUFF_16 /Users/junhypar/main/gnl-war-machine/tests/line.txt 1
 
 LEAKS OK :D
 
 BUFFER_SIZE=32 ===================================================
-$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=32 -o BUFF_32
+$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/main/gnl-war-machine/get_next_line.c /Users/junhypar/main/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=32 -o BUFF_32
 $> ./BUFF_32 tests/line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_line.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_line.txt.output
 
 Diff OK :D
 $> ./BUFF_32 tests/n.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_n.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_n.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_n.txt /Users/junhypar/main/gnl-war-machine/tests/default_n.txt.output
 
 Diff OK :D
 $> ./BUFF_32 tests/void.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_void.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_void.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_void.txt /Users/junhypar/main/gnl-war-machine/tests/default_void.txt.output
 
 Diff OK :D
 $> ./BUFF_32 tests/Mr._Justice_Maxell_by_Edgar_Wallace.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_Mr._Justice_Maxell_by_Edgar_Wallace.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/main/gnl-war-machine/tests/default_Mr._Justice_Maxell_by_Edgar_Wallace.txt.output
 
 Diff OK :D
 $> ./BUFF_32 tests/63_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_63_line /Users/junhypar/main/gnl-war-machine/tests/default_63_line.output
 
 Diff OK :D
 $> ./BUFF_32 tests/lorem_ipsum 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_lorem_ipsum /Users/junhypar/main/gnl-war-machine/tests/default_lorem_ipsum.output
 
 Diff OK :D
 $> ./BUFF_32 tests/63_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_63_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_63_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_63_line_nl.output
 
 Diff OK :D
 $> ./BUFF_32 tests/baudelaire.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_baudelaire.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_baudelaire.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_baudelaire.txt /Users/junhypar/main/gnl-war-machine/tests/default_baudelaire.txt.output
 
 Diff OK :D
 $> ./BUFF_32 tests/many_lines 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_many_lines /Users/junhypar/42seoul/gnl-war-machine/tests/default_many_lines.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_many_lines /Users/junhypar/main/gnl-war-machine/tests/default_many_lines.output
 
 Diff OK :D
 $> ./BUFF_32 tests/64_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_64_line /Users/junhypar/main/gnl-war-machine/tests/default_64_line.output
 
 Diff OK :D
 $> ./BUFF_32 tests/empty 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_empty /Users/junhypar/42seoul/gnl-war-machine/tests/default_empty.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_empty /Users/junhypar/main/gnl-war-machine/tests/default_empty.output
 
 Diff OK :D
 $> ./BUFF_32 tests/multi_in_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_multi_in_one /Users/junhypar/main/gnl-war-machine/tests/default_multi_in_one.output
 
 Diff OK :D
 $> ./BUFF_32 tests/64_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_64_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_64_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_64_line_nl.output
 
 Diff OK :D
 $> ./BUFF_32 tests/empty_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_empty_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_empty_one.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_empty_one /Users/junhypar/main/gnl-war-machine/tests/default_empty_one.output
 
 Diff OK :D
 $> ./BUFF_32 tests/one_big_fat_line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_one_big_fat_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_one_big_fat_line.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_one_big_fat_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_one_big_fat_line.txt.output
 
 Diff OK :D
 $> ./BUFF_32 tests/65_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_65_line /Users/junhypar/main/gnl-war-machine/tests/default_65_line.output
 
 Diff OK :D
 $> ./BUFF_32 tests/expected_result 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_expected_result /Users/junhypar/42seoul/gnl-war-machine/tests/default_expected_result.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_expected_result /Users/junhypar/main/gnl-war-machine/tests/default_expected_result.output
 
 Diff OK :D
 $> ./BUFF_32 tests/over_buffer 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_over_buffer /Users/junhypar/main/gnl-war-machine/tests/default_over_buffer.output
 
 Diff OK :D
 $> ./BUFF_32 tests/65_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_65_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_65_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_65_line_nl.output
 
 Diff OK :D
 $> ./BUFF_32 tests/large_file.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_large_file.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_large_file.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_large_file.txt /Users/junhypar/main/gnl-war-machine/tests/default_large_file.txt.output
 
 Diff OK :D
 $> ./BUFF_32 tests/simple 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_32_simple /Users/junhypar/42seoul/gnl-war-machine/tests/default_simple.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_32_simple /Users/junhypar/main/gnl-war-machine/tests/default_simple.output
 
 Diff OK :D
-$> ./BUFF_32 /Users/junhypar/42seoul/gnl-war-machine/tests/line.txt 1
+$> ./BUFF_32 /Users/junhypar/main/gnl-war-machine/tests/line.txt 1
 
 LEAKS OK :D
 
 BUFFER_SIZE=48 ===================================================
-$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line.c /Users/junhypar/42seoul/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=48 -o BUFF_48
+$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/main/gnl-war-machine/get_next_line.c /Users/junhypar/main/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=48 -o BUFF_48
 $> ./BUFF_48 tests/line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_line.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_line.txt.output
 
 Diff OK :D
 $> ./BUFF_48 tests/n.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_n.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_n.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_n.txt /Users/junhypar/main/gnl-war-machine/tests/default_n.txt.output
 
 Diff OK :D
 $> ./BUFF_48 tests/void.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_void.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_void.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_void.txt /Users/junhypar/main/gnl-war-machine/tests/default_void.txt.output
 
 Diff OK :D
 $> ./BUFF_48 tests/Mr._Justice_Maxell_by_Edgar_Wallace.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_Mr._Justice_Maxell_by_Edgar_Wallace.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/main/gnl-war-machine/tests/default_Mr._Justice_Maxell_by_Edgar_Wallace.txt.output
 
 Diff OK :D
 $> ./BUFF_48 tests/63_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_63_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_63_line /Users/junhypar/main/gnl-war-machine/tests/default_63_line.output
 
 Diff OK :D
 $> ./BUFF_48 tests/lorem_ipsum 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_lorem_ipsum /Users/junhypar/42seoul/gnl-war-machine/tests/default_lorem_ipsum.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_lorem_ipsum /Users/junhypar/main/gnl-war-machine/tests/default_lorem_ipsum.output
 
 Diff OK :D
 $> ./BUFF_48 tests/63_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_63_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_63_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_63_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_63_line_nl.output
 
 Diff OK :D
 $> ./BUFF_48 tests/baudelaire.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_baudelaire.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_baudelaire.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_baudelaire.txt /Users/junhypar/main/gnl-war-machine/tests/default_baudelaire.txt.output
 
 Diff OK :D
 $> ./BUFF_48 tests/many_lines 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_many_lines /Users/junhypar/42seoul/gnl-war-machine/tests/default_many_lines.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_many_lines /Users/junhypar/main/gnl-war-machine/tests/default_many_lines.output
 
 Diff OK :D
 $> ./BUFF_48 tests/64_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_64_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_64_line /Users/junhypar/main/gnl-war-machine/tests/default_64_line.output
 
 Diff OK :D
 $> ./BUFF_48 tests/empty 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_empty /Users/junhypar/42seoul/gnl-war-machine/tests/default_empty.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_empty /Users/junhypar/main/gnl-war-machine/tests/default_empty.output
 
 Diff OK :D
 $> ./BUFF_48 tests/multi_in_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_multi_in_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_multi_in_one.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_multi_in_one /Users/junhypar/main/gnl-war-machine/tests/default_multi_in_one.output
 
 Diff OK :D
 $> ./BUFF_48 tests/64_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_64_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_64_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_64_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_64_line_nl.output
 
 Diff OK :D
 $> ./BUFF_48 tests/empty_one 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_empty_one /Users/junhypar/42seoul/gnl-war-machine/tests/default_empty_one.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_empty_one /Users/junhypar/main/gnl-war-machine/tests/default_empty_one.output
 
 Diff OK :D
 $> ./BUFF_48 tests/one_big_fat_line.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_one_big_fat_line.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_one_big_fat_line.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_one_big_fat_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_one_big_fat_line.txt.output
 
 Diff OK :D
 $> ./BUFF_48 tests/65_line 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_65_line /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_65_line /Users/junhypar/main/gnl-war-machine/tests/default_65_line.output
 
 Diff OK :D
 $> ./BUFF_48 tests/expected_result 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_expected_result /Users/junhypar/42seoul/gnl-war-machine/tests/default_expected_result.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_expected_result /Users/junhypar/main/gnl-war-machine/tests/default_expected_result.output
 
 Diff OK :D
 $> ./BUFF_48 tests/over_buffer 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_over_buffer /Users/junhypar/42seoul/gnl-war-machine/tests/default_over_buffer.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_over_buffer /Users/junhypar/main/gnl-war-machine/tests/default_over_buffer.output
 
 Diff OK :D
 $> ./BUFF_48 tests/65_line_nl 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_65_line_nl /Users/junhypar/42seoul/gnl-war-machine/tests/default_65_line_nl.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_65_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_65_line_nl.output
 
 Diff OK :D
 $> ./BUFF_48 tests/large_file.txt 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_large_file.txt /Users/junhypar/42seoul/gnl-war-machine/tests/default_large_file.txt.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_large_file.txt /Users/junhypar/main/gnl-war-machine/tests/default_large_file.txt.output
 
 Diff OK :D
 $> ./BUFF_48 tests/simple 0
-$> diff -U 3 /Users/junhypar/42seoul/gnl-war-machine/tests/user_output_buff_48_simple /Users/junhypar/42seoul/gnl-war-machine/tests/default_simple.output
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_48_simple /Users/junhypar/main/gnl-war-machine/tests/default_simple.output
 
 Diff OK :D
-$> ./BUFF_48 /Users/junhypar/42seoul/gnl-war-machine/tests/line.txt 1
+$> ./BUFF_48 /Users/junhypar/main/gnl-war-machine/tests/line.txt 1
+
+LEAKS OK :D
+
+BUFFER_SIZE=9999 ===================================================
+$> gcc -Wall -Werror -Wextra tests/main.c /Users/junhypar/main/gnl-war-machine/get_next_line.c /Users/junhypar/main/gnl-war-machine/get_next_line_utils.c -D BUFFER_SIZE=9999 -o BUFF_9999
+$> ./BUFF_9999 tests/line.txt 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_line.txt.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/n.txt 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_n.txt /Users/junhypar/main/gnl-war-machine/tests/default_n.txt.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/void.txt 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_void.txt /Users/junhypar/main/gnl-war-machine/tests/default_void.txt.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/Mr._Justice_Maxell_by_Edgar_Wallace.txt 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_Mr._Justice_Maxell_by_Edgar_Wallace.txt /Users/junhypar/main/gnl-war-machine/tests/default_Mr._Justice_Maxell_by_Edgar_Wallace.txt.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/63_line 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_63_line /Users/junhypar/main/gnl-war-machine/tests/default_63_line.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/lorem_ipsum 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_lorem_ipsum /Users/junhypar/main/gnl-war-machine/tests/default_lorem_ipsum.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/63_line_nl 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_63_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_63_line_nl.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/baudelaire.txt 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_baudelaire.txt /Users/junhypar/main/gnl-war-machine/tests/default_baudelaire.txt.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/many_lines 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_many_lines /Users/junhypar/main/gnl-war-machine/tests/default_many_lines.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/64_line 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_64_line /Users/junhypar/main/gnl-war-machine/tests/default_64_line.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/empty 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_empty /Users/junhypar/main/gnl-war-machine/tests/default_empty.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/multi_in_one 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_multi_in_one /Users/junhypar/main/gnl-war-machine/tests/default_multi_in_one.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/64_line_nl 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_64_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_64_line_nl.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/empty_one 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_empty_one /Users/junhypar/main/gnl-war-machine/tests/default_empty_one.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/one_big_fat_line.txt 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_one_big_fat_line.txt /Users/junhypar/main/gnl-war-machine/tests/default_one_big_fat_line.txt.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/65_line 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_65_line /Users/junhypar/main/gnl-war-machine/tests/default_65_line.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/expected_result 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_expected_result /Users/junhypar/main/gnl-war-machine/tests/default_expected_result.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/over_buffer 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_over_buffer /Users/junhypar/main/gnl-war-machine/tests/default_over_buffer.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/65_line_nl 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_65_line_nl /Users/junhypar/main/gnl-war-machine/tests/default_65_line_nl.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/large_file.txt 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_large_file.txt /Users/junhypar/main/gnl-war-machine/tests/default_large_file.txt.output
+
+Diff OK :D
+$> ./BUFF_9999 tests/simple 0
+$> diff -U 3 /Users/junhypar/main/gnl-war-machine/tests/user_output_buff_9999_simple /Users/junhypar/main/gnl-war-machine/tests/default_simple.output
+
+Diff OK :D
+$> ./BUFF_9999 /Users/junhypar/main/gnl-war-machine/tests/line.txt 1
 
 LEAKS OK :D
 
