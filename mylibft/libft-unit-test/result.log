@@ -1,58 +1,64 @@
-ft_memset: x19.63 slower than system's function (67734 cpu ticks vs 1329374)
-ft_memset: x143.34 slower than system's function (19151 cpu ticks vs 2745176)
-ft_memset: x7.92 slower than system's function (80163 cpu ticks vs 635200)
+ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_bzero:      [OK] [OK] [OK] [OK] 
+ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memccpy:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_isalpha:    [OK] 
+ft_isdigit:    [OK] 
+ft_isalnum:    [OK] 
+ft_isascii:    [OK] 
+ft_isprint:    [OK] 
+ft_toupper:    [OK] 
+ft_tolower:    [OK] 
+ft_strchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strrchr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strncmp:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strlcpy:    [OK] [OK] [OK] [OK] [OK] [OK] {protected}
+ft_strlcat:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strnstr:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_atoi:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_calloc:     [OK] [OK] [OK] [OK] [OK] 
+ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_substr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
+ft_strjoin:    [OK] [OK] [OK] [OK] [OK] {protected}
+ft_strtrim:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
+ft_split:      [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] {protected}
+ft_itoa:       [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_strmapi:    [OK] [OK] [OK] [OK] [OK] {protected}
+ft_putchar_fd: [OK] [OK] [KO] 
+[KO]: your putchar_fd does not work with unicode
+Test code:
+	char buff[10];
+	char buff2[10];
+	int c = L'ø';
+	int len = 0;
 
-ft_bzero: x38.51 slower than system's function (69300 cpu ticks vs 2668615)
-ft_bzero: x63.60 slower than system's function (21152 cpu ticks vs 1345277)
-ft_bzero: x1.33 slower than system's function (3 cpu ticks vs 4)
+	putwchart(c, &len, buff2);
+	buff2[len] = 0;
+	fd_to_buffer(2);
+	ft_putchar_fd(c, 2);
+	write(2, "", 1);
+	get_fd_buffer(2, buff, 10);
+	if (!strcmp(buff, buff2))
+		exit(TEST_SUCCESS);
+	exit(TEST_KO);
 
-ft_memcpy: x10.67 slower than system's function (71177 cpu ticks vs 759593)
-ft_memcpy: x141.08 slower than system's function (10099 cpu ticks vs 1424805)
-ft_memcpy: x33.10 slower than system's function (48127 cpu ticks vs 1593128)
+Diffs:
+  putchar_fd: |�|
+ft_putchar_fd: |ø|
 
-ft_memccpy: x10.66 slower than system's function (50646 cpu ticks vs 539711)
-ft_memccpy: x91.10 slower than system's function (22217 cpu ticks vs 2023885)
-ft_memccpy: x16.64 slower than system's function (131477 cpu ticks vs 2187672)
-
-ft_memmove: x10.45 slower than system's function (36508 cpu ticks vs 381444)
-ft_memmove: x158.65 slower than system's function (9353 cpu ticks vs 1483882)
-ft_memmove: x32.64 slower than system's function (46464 cpu ticks vs 1516471)
-
-ft_memchr: x28.42 slower than system's function (23107 cpu ticks vs 656664)
-ft_memchr: x103.71 slower than system's function (98064 cpu ticks vs 10170695)
-ft_memchr: x39.79 slower than system's function (67490 cpu ticks vs 2685208)
-
-ft_memcmp: x18.47 slower than system's function (51462 cpu ticks vs 950632)
-ft_memcmp: x52.03 slower than system's function (218951 cpu ticks vs 11392171)
-ft_memcmp: x28.01 slower than system's function (70436 cpu ticks vs 1973115)
-
-ft_strlen: x19.92 slower than system's function (136540 cpu ticks vs 2719666)
-ft_strlen: x56.32 slower than system's function (188263 cpu ticks vs 10602500)
-ft_strlen: x34.81 slower than system's function (39538 cpu ticks vs 1376127)
-
-ft_strchr: x23.33 slower than system's function (132438 cpu ticks vs 3090175)
-ft_strchr: x79.68 slower than system's function (38371 cpu ticks vs 3057260)
-ft_strchr: x44.07 slower than system's function (72597 cpu ticks vs 3199626)
-
-ft_strrchr: x6.79 slower than system's function (203607 cpu ticks vs 1382204)
-ft_strrchr: x7.07 slower than system's function (185283 cpu ticks vs 1309170)
-ft_strrchr: x3.93 slower than system's function (178190 cpu ticks vs 700601)
-
-ft_strncmp: x25.21 slower than system's function (230063 cpu ticks vs 5800257)
-ft_strncmp: x62.00 slower than system's function (186885 cpu ticks vs 11586095)
-ft_strncmp: x55.92 slower than system's function (105933 cpu ticks vs 5923784)
-
-ft_strlcat: x23.56 slower than system's function (58360 cpu ticks vs 1375176)
-ft_strlcat: x44.62 slower than system's function (40760 cpu ticks vs 1818694)
-ft_strlcat: x8.99 slower than system's function (78777 cpu ticks vs 708255)
-
-ft_strnstr: x10.95 slower than system's function (303929 cpu ticks vs 3327566)
-ft_strnstr: x10.95 slower than system's function (303929 cpu ticks vs 3327566)
-ft_strnstr: x10.95 slower than system's function (303929 cpu ticks vs 3327566)
-
-ft_atoi: x1.86 slower than system's function (541744 cpu ticks vs 1009133)
-
-ft_strdup: x6.39 slower than system's function (135524 cpu ticks vs 866272)
-ft_strdup: x6.47 slower than system's function (267475 cpu ticks vs 1731836)
-ft_strdup: x2.72 slower than system's function (629781 cpu ticks vs 1711217)
-
+ft_putstr_fd:  [OK] [OK] {protected}
+ft_putendl_fd: [OK] [OK] {protected}
+ft_putnbr_fd:  [OK] [OK] [OK] [OK] [OK] 
+ft_lstnew:     [OK] [OK] [OK] [OK] 
+ft_lstadd_front: [OK] [OK] [OK] 
+ft_lstsize:    [OK] [OK] 
+ft_lstlast:    [OK] [OK] 
+ft_lstadd_back:[OK] [OK] [OK] 
+ft_lstdelone:  [OK] 
+ft_lstclear:   [OK] [OK] [OK] 
+ft_lstiter:    [OK] {protected}
+ft_lstmap:     [OK] {protected}

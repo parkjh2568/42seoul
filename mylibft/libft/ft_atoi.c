@@ -6,26 +6,18 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 14:50:32 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/06 15:48:25 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/02/26 15:13:24 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		fttlen(const char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 int		no_num(const char *str, int *mine)
 {
 	int i;
 
 	i = 0;
-	while (i < fttlen(str))
+	while (i < ft_strlen((char *)str))
 	{
 		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' ||
 				str[i] == '\f' || str[i] == '\r' || str[i] == '\n')
@@ -47,23 +39,25 @@ int		no_num(const char *str, int *mine)
 
 int		ft_atoi(const char *str)
 {
-	int		len;
 	int		i;
-	int		out;
+	long	out;
 	int		mine;
 
 	i = 0;
 	mine = 0;
 	out = 0;
-	len = fttlen(str);
 	i = no_num(str, &mine);
-	while (i < len)
+	while ((str[i] >= '0' && str[i] <= '9'))
 	{
-		if (!(str[i] >= '0' && str[i] <= '9'))
-			break ;
 		out = out * 10;
-		out = out - (str[i] - '0');
-		i++;
+		out = out - (str[i++] - '0');
+		if (out > 2147483647)
+		{
+			if (out > 2147483648 && mine == 1)
+				return (0);
+			else if (mine == 0)
+				return (-1);
+		}
 	}
 	if (mine == 1)
 		return (out);
