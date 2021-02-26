@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 15:39:43 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/06 20:13:32 by junhypar         ###   ########.fr       */
+/*   Updated: 2020/10/31 21:16:05 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	{
 		d[i] = s[i];
 		if (s[i] == cc)
-			return (&dest[++i]);
+		{
+			i++;
+			return (&dest[i]);
+		}
 		i++;
 	}
 	return (0);
