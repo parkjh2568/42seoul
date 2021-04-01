@@ -5,6 +5,10 @@
 
 normV3 : https://github.com/42School/norminette
 
+각코드마다 들어가는 파일의 정보헤더폼
+
+https://github.com/parkjh2568/my_42_header.git
+
 -----
 
 #### 1.libft ####
