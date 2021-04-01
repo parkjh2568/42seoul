@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 13:59:15 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 14:37:16 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:42:42 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int		i;
 
 	if (s)
 	{

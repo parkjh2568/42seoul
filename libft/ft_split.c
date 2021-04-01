@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 11:48:49 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 14:41:03 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:48:35 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_word(int i, char const *s, char c)
 		cc++;
 		l--;
 	}
-	if (!(wod = (char *)malloc(sizeof(char) * (cc + 1))))
+	wod = (char *)malloc(sizeof(char) * (cc + 1));
+	if (!wod)
 		return (NULL);
 	l = 0;
 	while (l < cc)
@@ -40,10 +41,10 @@ char	*ft_word(int i, char const *s, char c)
 	return (wod);
 }
 
-int		count_numb(char const *s, char c)
+int	count_numb(char const *s, char c)
 {
-	int k;
-	int numb;
+	int		k;
+	int		numb;
 
 	numb = 0;
 	k = 0;
@@ -76,10 +77,10 @@ void	free_all(char **out, int j)
 	free(out);
 }
 
-int		mk_split(char c, char const *s, char **out)
+int	mk_split(char c, char const *s, char **out)
 {
-	int	i;
-	int j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -89,7 +90,8 @@ int		mk_split(char c, char const *s, char **out)
 	{
 		if ((s[i] == c && s[i - 1] != c) || (s[i] != c && s[i + 1] == 0))
 		{
-			if (!(out[j] = ft_word(i, s, c)))
+			out[j] = ft_word(i, s, c);
+			if (!out[j])
 			{
 				free_all(out, j);
 				return (-22);

@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 13:39:04 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/06 17:10:45 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:51:42 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	if (!(out = ft_strdup((char *)s)))
+	out = ft_strdup((char *)s);
+	if (!out)
 		return (NULL);
 	while (out[i])
 	{

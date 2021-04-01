@@ -6,15 +6,15 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/11 10:11:02 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/25 16:29:58 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:58:53 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int		ft_config(char *s)
+int	ft_config(char *s)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (s[i])
@@ -47,7 +47,7 @@ void	print_line(char **out, char **line, int i)
 	}
 }
 
-int		final_print(char **out, char **line, int i)
+int	final_print(char **out, char **line, int i)
 {
 	if (i < 0)
 		return (-1);
@@ -66,7 +66,7 @@ int		final_print(char **out, char **line, int i)
 	return (0);
 }
 
-int		get_next_line(int fd, char **line)
+int	get_next_line(int fd, char **line)
 {
 	char		buff[BUFFER_SIZE + 1];
 	static char	*out[50];
@@ -75,15 +75,18 @@ int		get_next_line(int fd, char **line)
 
 	if (0 > fd || BUFFER_SIZE <= 0 || line == 0)
 		return (-1);
-	while ((count = read(fd, buff, BUFFER_SIZE)) > 0)
+	count = read(fd, buff, BUFFER_SIZE);
+	while (count > 0)
 	{
 		buff[count] = '\0';
 		out[fd] = ft_strjoin(out[fd], buff);
-		if ((i = ft_config(out[fd])) >= 0)
+		i = ft_config(out[fd]);
+		if ((i >= 0))
 		{
 			print_line(&out[fd], line, i);
 			return (1);
 		}
+		count = read(fd, buff, BUFFER_SIZE);
 	}
 	return (final_print(&out[fd], line, count));
 }

@@ -6,11 +6,11 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 17:24:56 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/02 14:38:00 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:53:12 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			len(const char *s)
+int	len(const char *s)
 {
 	int	i;
 
@@ -20,7 +20,7 @@ int			len(const char *s)
 	return (i);
 }
 
-char		*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	const char	*d;
 	int			i;

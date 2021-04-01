@@ -6,13 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/01 09:47:25 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/06 15:45:35 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:51:56 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_strncmp(char *s1, char *s2, size_t n)
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	size_t			a;
 	unsigned char	*ss1;

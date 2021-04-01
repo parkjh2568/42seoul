@@ -6,15 +6,15 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 13:11:24 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/06 17:06:37 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:39:23 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_cot(int n)
+int	ft_cot(int n)
 {
-	int cot;
+	int		cot;
 
 	cot = 0;
 	while (n != 0)
@@ -27,8 +27,8 @@ int		ft_cot(int n)
 
 void	put_in(char *out, int n, int count, int mine)
 {
-	int i;
-	int m;
+	int		i;
+	int		m;
 
 	if (n < 0)
 		m = -1;
@@ -76,7 +76,8 @@ char	*ft_itoa(int n)
 	mine = 0;
 	count = 0;
 	n_count(&mine, &count, &n);
-	if (!(out = (char *)malloc(sizeof(char) * (count + 1))))
+	out = (char *)malloc(sizeof(char) * (count + 1));
+	if (!out)
 		return (NULL);
 	if (n == 0)
 		put_zero(out);

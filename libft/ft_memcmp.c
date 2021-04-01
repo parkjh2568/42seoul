@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 16:38:05 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/06 15:21:12 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:42:25 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *c1;
-	unsigned char *c2;
+	unsigned char	*c1;
+	unsigned char	*c2;
 
 	c1 = (unsigned char *)s1;
 	c2 = (unsigned char *)s2;

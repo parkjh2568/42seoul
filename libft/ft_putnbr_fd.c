@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 14:01:20 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/06 14:50:49 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:43:00 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char a;
+	char	a;
 
 	if (n == -2147483648)
 		write(fd, "-2147483648", 11);

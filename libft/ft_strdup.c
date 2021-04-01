@@ -6,13 +6,13 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/04 14:51:06 by junhypar          #+#    #+#             */
-/*   Updated: 2020/10/30 16:22:31 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:48:51 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char		*ft_strdup(char *src)
+char	*ft_strdup(char *src)
 {
 	char	*a;
 	int		b;

@@ -6,21 +6,21 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 14:50:32 by junhypar          #+#    #+#             */
-/*   Updated: 2021/02/26 15:13:24 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:40:08 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		no_num(const char *str, int *mine)
+int	no_num(const char *str, int *mine)
 {
-	int i;
+	int		i;
 
 	i = 0;
 	while (i < ft_strlen((char *)str))
 	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' ||
-				str[i] == '\f' || str[i] == '\r' || str[i] == '\n')
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\v'
+			|| str[i] == '\f' || str[i] == '\r' || str[i] == '\n')
 			i++;
 		else
 			break ;
@@ -37,7 +37,7 @@ int		no_num(const char *str, int *mine)
 	return (i);
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int		i;
 	long	out;

@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 09:51:32 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 10:50:51 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:38:10 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	*ft_calloc(size_t n, size_t size)
 {
 	char	*out;
 
-	if (!(out = malloc(n * size)))
+	out = malloc(n * size);
+	if (!out)
 		return (NULL);
 	ft_memset(out, 0, n * size);
 	return (out);

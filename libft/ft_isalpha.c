@@ -6,11 +6,11 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/30 11:28:44 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/01 09:38:17 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:38:26 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 'A') && (c <= 'Z'))
 	{

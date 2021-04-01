@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 10:22:59 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/14 16:02:23 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:55:24 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned		slen;
+	size_t			slen;
 	char			*out;
 	size_t			i;
 
@@ -26,7 +26,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (slen >= start + len)
 	{
-		if (!(out = malloc(sizeof(char) * (len + 1))))
+		out = malloc(sizeof(char) * (len + 1));
+		if (!out)
 			return (NULL);
 		while (i < len)
 		{

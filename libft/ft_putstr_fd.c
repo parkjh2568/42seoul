@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 13:55:48 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/11 14:36:28 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:43:12 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int		i;
 
 	if (s)
 	{

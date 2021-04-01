@@ -6,7 +6,7 @@
 /*   By: junhypar <junhypar@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 09:42:04 by junhypar          #+#    #+#             */
-/*   Updated: 2020/07/09 22:39:46 by junhypar         ###   ########.fr       */
+/*   Updated: 2021/04/01 16:41:26 by junhypar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	f_ree_list(t_list *start, void (*del)(void *))
 {
-	t_list *ot;
+	t_list	*ot;
 
 	while (start)
 	{
