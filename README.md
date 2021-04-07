@@ -1,15 +1,3 @@
-## 42seoul 프로젝트의 시작 ##
-
-
-대부분의 42seoul의 프로젝트는 아래의 normV3의 폼을 기준으로 코드를 작성한다
-
-normV3 : https://github.com/42School/norminette
-
-각코드마다 들어가는 파일의 정보헤더폼
-
-https://github.com/parkjh2568/my_42_header.git
-
------
 
 #### 1.libft ####
 
